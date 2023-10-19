@@ -92,7 +92,9 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-
+  //koncz_note: disable dead battery on TCPP01:
+  HAL_GPIO_WritePin(usbdb__GPIO_Port, usbdb__Pin, GPIO_PIN_SET);
+  
   //MX_ADC4_Init(); //koncz_note: egyelore ezek kimaradnak
   MX_SPI1_Init();
   //MX_UART4_Init();

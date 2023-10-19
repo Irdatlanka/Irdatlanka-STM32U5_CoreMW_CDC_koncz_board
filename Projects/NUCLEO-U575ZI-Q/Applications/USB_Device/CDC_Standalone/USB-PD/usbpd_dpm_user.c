@@ -123,6 +123,7 @@ void USBPD_DPM_UserExecute(void const *argument)
 #else
   //zöld LED villogtatás koncz boardon
   HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_0);
+  
   HAL_Delay(200);
 #endif
 }
