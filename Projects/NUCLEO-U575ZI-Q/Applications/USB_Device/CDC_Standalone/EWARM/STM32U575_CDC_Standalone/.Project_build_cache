@@ -3,15 +3,15 @@
     <Tool>
         <Name>linker</Name>
         <Parent>
-            <Path>C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Exe\Project.out</Path>
+            <Path>C:\Users\Irdatlanka\Desktop\STM32U5_CoreMW_CDC_konczboard\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Exe\Project.out</Path>
             <Output>
-                <Path>C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\List\Project.map</Path>
+                <Path>C:\Users\Irdatlanka\Desktop\STM32U5_CoreMW_CDC_konczboard\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\List\Project.map</Path>
             </Output>
         </Parent>
         <Parent>
-            <Path>C:\Users\Imre\Documents\GitHub\stm32u5-classic-coremw-apps\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Exe\Project.out</Path>
+            <Path>C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Exe\Project.out</Path>
             <Output>
-                <Path>C:\Users\Imre\Documents\GitHub\stm32u5-classic-coremw-apps\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\List\Project.map</Path>
+                <Path>C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\List\Project.map</Path>
             </Output>
         </Parent>
         <Parent>
@@ -21,9 +21,9 @@
             </Output>
         </Parent>
         <Parent>
-            <Path>C:\Users\Irdatlanka\Desktop\STM32U5_CoreMW_CDC_konczboard\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Exe\Project.out</Path>
+            <Path>C:\Users\Imre\Documents\GitHub\stm32u5-classic-coremw-apps\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Exe\Project.out</Path>
             <Output>
-                <Path>C:\Users\Irdatlanka\Desktop\STM32U5_CoreMW_CDC_konczboard\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\List\Project.map</Path>
+                <Path>C:\Users\Imre\Documents\GitHub\stm32u5-classic-coremw-apps\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\List\Project.map</Path>
             </Output>
         </Parent>
     </Tool>

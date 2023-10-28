@@ -86,7 +86,7 @@ int main(void)
   SystemClock_Config();
 
 #ifndef TARGET_KONCZBOARD
-  //koncz_note
+  //koncz_note koncz_change
   BSP_LED_Init(LED1);
 #endif
 
@@ -753,6 +753,7 @@ static void MX_GPIO_Init(void)
   */
 void Error_Handler(void)
 {       
+//koncz_change
 #ifndef TARGET_KONCZBOARD
   BSP_LED_On(LED1);
   while (1)
