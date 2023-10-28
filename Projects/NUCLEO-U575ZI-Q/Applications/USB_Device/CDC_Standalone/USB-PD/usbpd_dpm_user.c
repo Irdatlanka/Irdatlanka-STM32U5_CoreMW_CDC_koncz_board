@@ -18,7 +18,12 @@
 
 #define USBPD_DPM_USER_C
 /* Includes ------------------------------------------------------------------*/
-#include "stm32u5xx_nucleo_usbpd_pwr.h"
+//koncz_change: csere Seahorse-ra
+#ifndef TARGET_KONCZBOARD
+ #include "stm32u5xx_nucleo_usbpd_pwr.h"
+#else
+ #include "seahorse_usbpd_pwr.h"  
+#endif
 #include "main.h"
 #include "usbpd_core.h"
 #include "usbpd_dpm_user.h"

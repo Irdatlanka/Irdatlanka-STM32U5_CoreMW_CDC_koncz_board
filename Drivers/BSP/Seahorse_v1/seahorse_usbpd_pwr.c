@@ -1,28 +1,28 @@
 /**
   ******************************************************************************
-  * @file    stm32u5xx_nucleo_usbpd_pwr.c
-  * @author  MCD Application Team
-  * @brief   This file provides a set of firmware functions to manage
-  *          USB-PD Power on a STM32U5xx-Nucleo Kit:
-  *            - VBUS control
-  *            - VBUS voltage/current measurement
-  *            - VCONN control
-  *            - VBUS presence detection
-  ******************************************************************************
-  * @attention
   *
-  * Copyright (c) 2021 STMicroelectronics.
-  * All rights reserved.
   *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  *
+  *
+  *
+  *
+  *
+  *
+  *
+  *
+  *
+  *
+  *
+  *
+  *
+  *
   *
   ******************************************************************************
   */
 
 /* Includes ------------------------------------------------------------------*/
-#include "stm32u5xx_nucleo_usbpd_pwr.h"
+#include "seahorse_usbpd_pwr.h"
 #include "stm32u5xx_ll_adc.h"
 #include "stm32u5xx_ll_bus.h"
 #include "stm32u5xx_ll_gpio.h"

@@ -30,7 +30,12 @@ extern "C" {
 #include "stm32u5xx_ll_gpio.h"
 #include "stm32u5xx_ll_ucpd.h"
 #include "stm32u5xx_ll_pwr.h"
-#include "stm32u5xx_nucleo_usbpd_pwr.h"
+//koncz_change: csere Seahorse-ra
+#ifndef TARGET_KONCZBOARD
+ #include "stm32u5xx_nucleo_usbpd_pwr.h"
+#else
+ #include "seahorse_usbpd_pwr.h" 
+#endif
 #include "usbpd_pwr_if.h"
 /* Private typedef -----------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/

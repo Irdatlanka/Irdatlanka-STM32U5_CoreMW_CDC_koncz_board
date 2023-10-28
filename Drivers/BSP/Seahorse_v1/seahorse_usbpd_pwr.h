@@ -1,32 +1,32 @@
 /**
   ******************************************************************************
-  * @file    stm32u5xx_nucleo_usbpd_pwr.h
-  * @author  MCD Application Team
-  * @brief   Header file for stm32u5xx_nucleo_usbpd_pwr.c file
-  ******************************************************************************
-  * @attention
   *
-  * Copyright (c) 2021 STMicroelectronics.
-  * All rights reserved.
   *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  *
+  *
+  *
+  *
+  *
+  *
+  *
+  *
+  *
   *
   ******************************************************************************
   */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef STM32U5XX_NUCLEO_USBPD_PWR_H
-#define STM32U5XX_NUCLEO_USBPD_PWR_H
+#ifndef SEAHORSE_USBPD_PWR_H
+#define SEAHORSE_USBPD_PWR_H
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 /* Includes ------------------------------------------------------------------*/
-#include "stm32u5xx_nucleo_conf.h"
-#include "stm32u5xx_nucleo_errno.h"
+#include "seahorse_conf.h"
+#include "seahorse_errno.h"
 
 /** @addtogroup BSP
   * @{

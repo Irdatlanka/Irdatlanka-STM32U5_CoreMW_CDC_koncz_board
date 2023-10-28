@@ -1509,12 +1509,12 @@
                 </file>
             </group>
             <group>
-                <name>STM32U5xx_Nucleo</name>
+                <name>Seahorse_v1</name>
                 <file>
-                    <name>$PROJ_DIR$\..\..\..\..\..\..\Drivers\BSP\STM32U5xx_Nucleo\stm32u5xx_nucleo.c</name>
+                    <name>$PROJ_DIR$\..\..\..\..\..\..\Drivers\BSP\Seahorse_v1\seahorse.c</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\..\..\..\..\..\Drivers\BSP\STM32U5xx_Nucleo\stm32u5xx_nucleo_usbpd_pwr.c</name>
+                    <name>$PROJ_DIR$\..\..\..\..\..\..\Drivers\BSP\Seahorse_v1\seahorse_usbpd_pwr.c</name>
                 </file>
             </group>
         </group>

@@ -39,6 +39,8 @@ C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applicatio
 -I
 C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\USB-PD
 -I
+C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Drivers\BSP\Seahorse_v1
+-I
 C:\Program Files\IAR Systems\Embedded Workbench 9.2\arm\CMSIS\Core\Include\
 -I
 C:\Program Files\IAR Systems\Embedded Workbench 9.2\arm\inc\c\aarch32
@@ -74,6 +76,8 @@ C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Middlewares\ST\STM32_USBPD_Library\
 C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\USB-PD\Target
 -I
 C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\USB-PD
+-I
+C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Drivers\BSP\Seahorse_v1
 -I
 C:\Program Files\IAR Systems\Embedded Workbench 9.2\arm\CMSIS\Core\Include
 -D__CHAR_BITS__=8

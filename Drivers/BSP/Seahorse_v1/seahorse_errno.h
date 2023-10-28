@@ -1,24 +1,24 @@
 /**
   ******************************************************************************
-  * @file    stm32u5xx_nucleo_errno.h
-  * @author  MCD Application Team
-  * @brief   Error Code.
-  ******************************************************************************
-  * @attention
   *
-  * Copyright (c) 2021 STMicroelectronics.
-  * All rights reserved.
   *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  *
+  *
+  *
+  *
+  *
+  *
+  *
+  *
+  *
   *
   ******************************************************************************
   */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef STM32U5XX_NUCLEO_ERRNO_H
-#define STM32U5XX_NUCLEO_ERRNO_H
+#ifndef SEAHORSE_ERRNO_H
+#define SEAHORSE_ERRNO_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -42,4 +42,4 @@ extern "C" {
 }
 #endif
 
-#endif /* STM32U5XX_NUCLEO_ERRNO_H */
+#endif /* SEAHORSE_NUCLEO_ERRNO_H */

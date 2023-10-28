@@ -19,16 +19,16 @@
   */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef STM32U5XX_NUCLEO_H
-#define STM32U5XX_NUCLEO_H
+#ifndef SEAHORSE_H
+#define SEAHORSE_H
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 /* Includes ------------------------------------------------------------------*/
-#include "stm32u5xx_nucleo_conf.h"
-#include "stm32u5xx_nucleo_errno.h"
+#include "seahorse_conf.h"
+#include "seahorse_errno.h"
 
 #if (USE_BSP_COM_FEATURE > 0)
 #if (USE_COM_LOG > 0)

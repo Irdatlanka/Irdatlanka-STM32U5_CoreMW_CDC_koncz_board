@@ -370,6 +370,7 @@
                     <state>$PROJ_DIR$\..\..\..\..\..\..\Middlewares\ST\STM32_USBPD_Library\Devices\STM32U5XX\inc</state>
                     <state>$PROJ_DIR$\..\USB-PD\Target</state>
                     <state>$PROJ_DIR$\..\USB-PD</state>
+                    <state>C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Drivers\BSP\Seahorse_v1</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -1189,12 +1190,12 @@
                 </file>
             </group>
             <group>
-                <name>STM32U5xx_Nucleo</name>
+                <name>Seahorse_v1</name>
                 <file>
-                    <name>$PROJ_DIR$\..\..\..\..\..\..\Drivers\BSP\STM32U5xx_Nucleo\stm32u5xx_nucleo.c</name>
+                    <name>$PROJ_DIR$\..\..\..\..\..\..\Drivers\BSP\Seahorse_v1\seahorse.c</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\..\..\..\..\..\Drivers\BSP\STM32U5xx_Nucleo\stm32u5xx_nucleo_usbpd_pwr.c</name>
+                    <name>$PROJ_DIR$\..\..\..\..\..\..\Drivers\BSP\Seahorse_v1\seahorse_usbpd_pwr.c</name>
                 </file>
             </group>
         </group>

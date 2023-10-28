@@ -1,10 +1,8 @@
 /**
   ******************************************************************************
-  * @file    stm32u5xx_nucleo_conf_template.h
+  * @file    stm32u5xx_nucleo_conf.h
   * @author  MCD Application Team
-  * @brief   STM32U5xx_Nuleo board configuration file.
-  *          This file should be copied to the application folder and renamed
-  *          to stm32u5xx_nucleo_conf.h
+  * @brief   STM32U5XX nucleo board configuration file.
   ******************************************************************************
   * @attention
   *
@@ -29,50 +27,19 @@ extern "C" {
 /* Includes ------------------------------------------------------------------*/
 #include "stm32u5xx_hal.h"
 
-/** @addtogroup BSP
-  * @{
-  */
+/* Usage of nucleo board */
+#define USE_NUCLEO_144      1U
 
-/** @addtogroup STM32U5XX_NUCLEO
-  * @{
-  */
+/* Usage of COM feature */
+#define USE_BSP_COM_FEATURE 1U
+#define USE_COM_LOG         0U
 
-/** @defgroup STM32U5XX_NUCLEO_CONFIG Config
-  * @{
-  */
-
-/** @defgroup STM32U5XX_NUCLEO_CONFIG_Exported_Constants Exported Constants
-  * @{
-  */
-/* Nucleo pin and part number defines */
-#define USE_NUCLEO_144
-#define USE_NUCLEO_U575ZI_Q
-
-/* COM define */
-#define USE_COM_LOG                         0U
-#define USE_BSP_COM_FEATURE                 0U
-
-/* IRQ priorities */
-#define BSP_BUTTON_USER_IT_PRIORITY         15U
-
-/**
-  * @}
-  */
-
-/**
-  * @}
-  */
-
-/**
-  * @}
-  */
-
-/**
-  * @}
-  */
+/* Button user interrupt priority */
+#define BSP_BUTTON_USER_IT_PRIORITY 0x07UL  /* Default is lowest priority level */
 
 #ifdef __cplusplus
 }
 #endif
 
 #endif /* STM32U5XX_NUCLEO_CONF_H */
+

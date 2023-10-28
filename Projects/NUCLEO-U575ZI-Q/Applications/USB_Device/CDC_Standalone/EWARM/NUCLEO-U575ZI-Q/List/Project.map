@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.40.2.374/W64 for ARM                  28/Oct/2023  20:27:21
+# IAR ELF Linker V9.40.2.374/W64 for ARM                  28/Oct/2023  21:47:17
 # Copyright 2007-2023 IAR Systems AB.
 #
 #    Output file  =
@@ -13,6 +13,8 @@
 #        (C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Core_13247989168731456611.dir\main.o
 #        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Components_1361118596739929299.dir\mfxstm32l152.o
 #        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Components_1361118596739929299.dir\mfxstm32l152_reg.o
+#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Seahorse_v1_13032176894571403394.dir\seahorse.o
+#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Seahorse_v1_13032176894571403394.dir\seahorse_usbpd_pwr.o
 #        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\EWARM_18443280873093131863.dir\startup_stm32u575xx.o
 #        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal.o
 #        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_adc.o
@@ -45,8 +47,6 @@
 #        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_ll_gpio.o
 #        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_ll_ucpd.o
 #        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_ll_usb.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_Nucleo_17360961038387864367.dir\stm32u5xx_nucleo.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_Nucleo_17360961038387864367.dir\stm32u5xx_nucleo_usbpd_pwr.o
 #        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\CMSIS_6603591812247902717.dir\system_stm32u5xx.o
 #        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\App_6612947199827748718.dir\usb_device.o
 #        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\CDC_16681379477064853705.dir\usbd_cdc.o
@@ -170,7 +170,7 @@ initialize by copy { rw };
   .text              ro code   0x800'5e34    0x46  stm32u5xx_hal_spi_ex.o [8]
   .text              ro code   0x800'5e7a     0x2  stm32u5xx_hal_adc.o [8]
   .text              ro code   0x800'5e7c    0xf8  stm32u5xx_hal_uart_ex.o [8]
-  .text              ro code   0x800'5f74    0xc8  usbpd_phy_hw_if.o [10]
+  .text              ro code   0x800'5f74    0xc8  usbpd_phy_hw_if.o [9]
   .text              ro code   0x800'603c    0xe0  usb_device.o [1]
   .text              ro code   0x800'611c    0x14  usbpd.o [12]
   .text              ro code   0x800'6130    0xd4  usbpd_dpm_core.o [12]
@@ -186,23 +186,23 @@ initialize by copy { rw };
   .text              ro code   0x800'6c50    0x50  no_free_heap0.o [14]
   .text              ro code   0x800'6ca0     0x6  ABImemclr.o [16]
   .text              ro code   0x800'6ca6     0x2  stm32u5xx_hal_adc_ex.o [8]
-  .text              ro code   0x800'6ca8   0x3a4  usbpd_cad_hw_if.o [10]
+  .text              ro code   0x800'6ca8   0x3a4  usbpd_cad_hw_if.o [9]
   .text              ro code   0x800'704c    0x70  usbpd_usb_if.o [12]
   .text              ro code   0x800'70bc    0x2c  xgetmemchunk.o [14]
   .text              ro code   0x800'70e8    0x66  ABImemset.o [16]
   .text              ro code   0x800'714e     0x2  stm32u5xx_hal_adc_ex.o [8]
-  .text              ro code   0x800'7150     0x8  usbpd_hw.o [10]
+  .text              ro code   0x800'7150     0x8  usbpd_hw.o [9]
   .text              ro code   0x800'7158    0x64  stm32u5xx_ll_ucpd.o [8]
-  .text              ro code   0x800'71bc   0x218  stm32u5xx_nucleo_usbpd_pwr.o [9]
+  .text              ro code   0x800'71bc   0x218  seahorse_usbpd_pwr.o [10]
   .text              ro code   0x800'73d4    0x30  usbpd_pwr_if.o [12]
-  .text              ro code   0x800'7404     0x2  usbpd_trace.o [10]
+  .text              ro code   0x800'7404     0x2  usbpd_trace.o [9]
   .text              ro code   0x800'7406     0x2  stm32u5xx_hal_adc_ex.o [8]
   .text              ro code   0x800'7408   0xc64  stm32u5xx_hal_adc.o [8]
   .text              ro code   0x800'806c    0x14  memset.o [16]
   .text              ro code   0x800'8080    0xc4  stm32u5xx_hal_adc_ex.o [8]
-  .text              ro code   0x800'8144     0xe  usbpd_pwr_hw_if.o [10]
+  .text              ro code   0x800'8144     0xe  usbpd_pwr_hw_if.o [9]
   .text              ro code   0x800'8152     0x2  stm32u5xx_hal_adc_ex.o [8]
-  .text              ro code   0x800'8154   0x176  usbpd_hw_if_it.o [10]
+  .text              ro code   0x800'8154   0x176  usbpd_hw_if_it.o [9]
   .text              ro code   0x800'82cc   0x108  usbd_desc.o [1]
   .rodata            const     0x800'83d4    0x80  stm32u5xx_hal_gpio.o [8]
   .text              ro code   0x800'8454    0x5c  system_stm32u5xx.o [3]
@@ -371,18 +371,18 @@ initialize by copy { rw };
   .bss               zero     0x2000'18bc   0x220  usbd_conf.o [11]
   .bss               zero     0x2000'1adc   0x200  usbd_desc.o [1]
   .bss               zero     0x2000'1cdc   0x120  main.o [5]
-  .bss               zero     0x2000'1dfc    0xb8  stm32u5xx_nucleo_usbpd_pwr.o [9]
+  .bss               zero     0x2000'1dfc    0xb8  seahorse_usbpd_pwr.o [10]
   .bss               zero     0x2000'1eb4    0x90  usbd_cdc_if.o [1]
   .bss               zero     0x2000'1f44    0x78  stm32u5xx_hal_msp.o [5]
-  .bss               zero     0x2000'1fbc    0x38  usbpd_phy_hw_if.o [10]
+  .bss               zero     0x2000'1fbc    0x38  usbpd_phy_hw_if.o [9]
   .bss               zero     0x2000'1ff4    0x10  usbpd_dpm_core.o [12]
-  .bss               zero     0x2000'2004     0xc  usbpd_cad_hw_if.o [10]
+  .bss               zero     0x2000'2004     0xc  usbpd_cad_hw_if.o [9]
   .bss               zero     0x2000'2010     0x8  usbpd_cad.o [13]
   .bss               zero     0x2000'2018     0x4  usbpd_dpm_core.o [12]
   .bss               zero     0x2000'201c     0x4  no_free_heap0.o [14]
   .bss               zero     0x2000'2020     0x4  xgetmemchunk.o [14]
   .bss               zero     0x2000'2024     0x1  usbd_ctlreq.o [6]
-  .bss               zero     0x2000'2025     0x1  usbpd_hw_if_it.o [10]
+  .bss               zero     0x2000'2025     0x1  usbpd_hw_if_it.o [9]
                             - 0x2000'2026   0xe42
 
 "P2", part 3 of 3:                          0x600
@@ -422,152 +422,152 @@ Copy/lz77 (__iar_lz77_init_single3)
 *** MODULE SUMMARY
 ***
 
-    Module                        ro code  ro data  rw data
-    ------                        -------  -------  -------
+    Module                   ro code  ro data  rw data
+    ------                   -------  -------  -------
 command line/config:
-    -------------------------------------------------------
+    --------------------------------------------------
     Total:
 
 C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\App_6612947199827748718.dir: [1]
-    usb_device.o                      224               720
-    usbd_cdc_if.o                     486      253    4'356
-    usbd_desc.o                       264        5      592
-    -------------------------------------------------------
-    Total:                            974      258    5'668
+    usb_device.o                 224               720
+    usbd_cdc_if.o                486      253    4'356
+    usbd_desc.o                  264        5      592
+    --------------------------------------------------
+    Total:                       974      258    5'668
 
 C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\CDC_16681379477064853705.dir: [2]
-    usbd_cdc.o                        776       17      272
-    -------------------------------------------------------
-    Total:                            776       17      272
+    usbd_cdc.o                   776       17      272
+    --------------------------------------------------
+    Total:                       776       17      272
 
 C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\CMSIS_6603591812247902717.dir: [3]
-    system_stm32u5xx.o                 92       72        4
-    -------------------------------------------------------
-    Total:                             92       72        4
+    system_stm32u5xx.o            92       72        4
+    --------------------------------------------------
+    Total:                        92       72        4
 
 C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Components_1361118596739929299.dir: [4]
-    -------------------------------------------------------
+    --------------------------------------------------
     Total:
 
 C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Core_13247989168731456611.dir: [5]
-    main.o                            748               288
-    stm32u5xx_hal_msp.o               356               120
-    stm32u5xx_it.o                     64
-    -------------------------------------------------------
-    Total:                          1'168               408
+    main.o                       748               288
+    stm32u5xx_hal_msp.o          356               120
+    stm32u5xx_it.o                64
+    --------------------------------------------------
+    Total:                     1'168               408
 
 C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Core_9232119672538125435.dir: [6]
-    usbd_core.o                       740
-    usbd_ctlreq.o                   1'164                 1
-    usbd_ioreq.o                      100
-    -------------------------------------------------------
-    Total:                          2'004                 1
+    usbd_core.o                  740
+    usbd_ctlreq.o              1'164                 1
+    usbd_ioreq.o                 100
+    --------------------------------------------------
+    Total:                     2'004                 1
 
 C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\EWARM_18443280873093131863.dir: [7]
-    startup_stm32u575xx.o           1'072
-    -------------------------------------------------------
-    Total:                          1'072
+    startup_stm32u575xx.o      1'072
+    --------------------------------------------------
+    Total:                     1'072
 
 C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir: [8]
-    stm32u5xx_hal.o                   186                12
-    stm32u5xx_hal_adc.o             3'182
-    stm32u5xx_hal_adc_ex.o            206
-    stm32u5xx_hal_cortex.o            232
-    stm32u5xx_hal_dma.o             1'504
-    stm32u5xx_hal_dma_ex.o            236
-    stm32u5xx_hal_gpio.o              868      128
-    stm32u5xx_hal_icache.o             56
-    stm32u5xx_hal_pcd.o             2'238
-    stm32u5xx_hal_pcd_ex.o            114
-    stm32u5xx_hal_pwr_ex.o            196
-    stm32u5xx_hal_rcc.o             3'154
-    stm32u5xx_hal_rcc_ex.o          3'992
-    stm32u5xx_hal_spi.o               490
-    stm32u5xx_hal_spi_ex.o             70
-    stm32u5xx_hal_tim.o             1'150
-    stm32u5xx_hal_tim_ex.o             14
-    stm32u5xx_hal_uart.o            3'740
-    stm32u5xx_hal_uart_ex.o           252
-    stm32u5xx_ll_ucpd.o               100
-    stm32u5xx_ll_usb.o              2'216
-    -------------------------------------------------------
-    Total:                         24'196      128       12
+    stm32u5xx_hal.o              186                12
+    stm32u5xx_hal_adc.o        3'182
+    stm32u5xx_hal_adc_ex.o       206
+    stm32u5xx_hal_cortex.o       232
+    stm32u5xx_hal_dma.o        1'504
+    stm32u5xx_hal_dma_ex.o       236
+    stm32u5xx_hal_gpio.o         868      128
+    stm32u5xx_hal_icache.o        56
+    stm32u5xx_hal_pcd.o        2'238
+    stm32u5xx_hal_pcd_ex.o       114
+    stm32u5xx_hal_pwr_ex.o       196
+    stm32u5xx_hal_rcc.o        3'154
+    stm32u5xx_hal_rcc_ex.o     3'992
+    stm32u5xx_hal_spi.o          490
+    stm32u5xx_hal_spi_ex.o        70
+    stm32u5xx_hal_tim.o        1'150
+    stm32u5xx_hal_tim_ex.o        14
+    stm32u5xx_hal_uart.o       3'740
+    stm32u5xx_hal_uart_ex.o      252
+    stm32u5xx_ll_ucpd.o          100
+    stm32u5xx_ll_usb.o         2'216
+    --------------------------------------------------
+    Total:                    24'196      128       12
 
-C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_Nucleo_17360961038387864367.dir: [9]
-    stm32u5xx_nucleo_usbpd_pwr.o      536               184
-    -------------------------------------------------------
-    Total:                            536               184
+C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32_USBPD_Library_10637878860516305910.dir: [9]
+    usbpd_cad_hw_if.o            932                12
+    usbpd_hw.o                     8
+    usbpd_hw_if_it.o             374                 1
+    usbpd_phy_hw_if.o            200                56
+    usbpd_pwr_hw_if.o             14
+    usbpd_trace.o                  2
+    --------------------------------------------------
+    Total:                     1'530                69
 
-C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32_USBPD_Library_10637878860516305910.dir: [10]
-    usbpd_cad_hw_if.o                 932                12
-    usbpd_hw.o                          8
-    usbpd_hw_if_it.o                  374                 1
-    usbpd_phy_hw_if.o                 200                56
-    usbpd_pwr_hw_if.o                  14
-    usbpd_trace.o                       2
-    -------------------------------------------------------
-    Total:                          1'530                69
+C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Seahorse_v1_13032176894571403394.dir: [10]
+    seahorse_usbpd_pwr.o         536               184
+    --------------------------------------------------
+    Total:                       536               184
 
 C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Target_14167004246567845465.dir: [11]
-    usbd_conf.o                       572             1'576
-    -------------------------------------------------------
-    Total:                            572             1'576
+    usbd_conf.o                  572             1'576
+    --------------------------------------------------
+    Total:                       572             1'576
 
 C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\USB-PD_16088497327023206971.dir: [12]
-    usbpd.o                            20
-    usbpd_dpm_core.o                  212                20
-    usbpd_dpm_user.o                   44
-    usbpd_pwr_if.o                     48
-    usbpd_usb_if.o                    112
-    -------------------------------------------------------
-    Total:                            436                20
+    usbpd.o                       20
+    usbpd_dpm_core.o             212                20
+    usbpd_dpm_user.o              44
+    usbpd_pwr_if.o                48
+    usbpd_usb_if.o               112
+    --------------------------------------------------
+    Total:                       436                20
 
 USBPDCORE_NOPD_CM0PLUS_wc32.a: [13]
-    usbpd_cad.o                       316                 8
-    usbpd_pe_lib.o                     28
-    -------------------------------------------------------
-    Total:                            344                 8
+    usbpd_cad.o                  316                 8
+    usbpd_pe_lib.o                28
+    --------------------------------------------------
+    Total:                       344                 8
 
 dl7M_tlf.a: [14]
-    exit.o                              4
-    low_level_init.o                    4
-    no_free_heap0.o                    80                 4
-    xgetmemchunk.o                     44                 4
-    -------------------------------------------------------
-    Total:                            132                 8
+    exit.o                         4
+    low_level_init.o               4
+    no_free_heap0.o               80                 4
+    xgetmemchunk.o                44                 4
+    --------------------------------------------------
+    Total:                       132                 8
 
 m7M_tls.a: [15]
-    fpinit_M.o                         34
-    -------------------------------------------------------
-    Total:                             34
+    fpinit_M.o                    34
+    --------------------------------------------------
+    Total:                        34
 
 rt7M_tl.a: [16]
-    ABImemclr.o                         6
-    ABImemclr4.o                        6
-    ABImemcpy_small.o                  24
-    ABImemset.o                       102
-    ABImemset48.o                      50
-    I64DivMod_small.o                 262
-    I64DivZer.o                         2
-    cexit.o                            10
-    cmain.o                            30
-    cstartup_M.o                       28
-    data_init.o                        40
-    lz77_init_single.o                126
-    memset.o                           20
-    zero_init3.o                       56
-    -------------------------------------------------------
-    Total:                            762
+    ABImemclr.o                    6
+    ABImemclr4.o                   6
+    ABImemcpy_small.o             24
+    ABImemset.o                  102
+    ABImemset48.o                 50
+    I64DivMod_small.o            262
+    I64DivZer.o                    2
+    cexit.o                       10
+    cmain.o                       30
+    cstartup_M.o                  28
+    data_init.o                   40
+    lz77_init_single.o           126
+    memset.o                      20
+    zero_init3.o                  56
+    --------------------------------------------------
+    Total:                       762
 
 shb_l.a: [17]
-    exit.o                             20
-    -------------------------------------------------------
-    Total:                             20
+    exit.o                        20
+    --------------------------------------------------
+    Total:                        20
 
-    Gaps                                6        2
-    Linker created                              32    1'536
------------------------------------------------------------
-    Grand Total:                   34'654      509    9'766
+    Gaps                           6        2
+    Linker created                         32    1'536
+------------------------------------------------------
+    Grand Total:              34'654      509    9'766
 
 
 *******************************************************************************
@@ -587,19 +587,19 @@ ADF1_IRQHandler          0x800'8811         Code  Wk  startup_stm32u575xx.o [7]
 AES_IRQHandler           0x800'87c9         Code  Wk  startup_stm32u575xx.o [7]
 AHBPrescTable            0x800'84a0   0x10  Data  Gb  system_stm32u5xx.o [3]
 APBPrescTable            0x800'8658    0x8  Data  Gb  system_stm32u5xx.o [3]
-BSP_USBPD_PWR_Init       0x800'7205   0x42  Code  Gb  stm32u5xx_nucleo_usbpd_pwr.o [9]
+BSP_USBPD_PWR_Init       0x800'7205   0x42  Code  Gb  seahorse_usbpd_pwr.o [10]
 BSP_USBPD_PWR_VBUSDeInit
-                         0x800'731d   0x4e  Code  Gb  stm32u5xx_nucleo_usbpd_pwr.o [9]
+                         0x800'731d   0x4e  Code  Gb  seahorse_usbpd_pwr.o [10]
 BSP_USBPD_PWR_VBUSGetVoltage
-                         0x800'736b   0x40  Code  Gb  stm32u5xx_nucleo_usbpd_pwr.o [9]
-BSP_USBPD_PWR_VBUSInit   0x800'7247   0xd6  Code  Gb  stm32u5xx_nucleo_usbpd_pwr.o [9]
+                         0x800'736b   0x40  Code  Gb  seahorse_usbpd_pwr.o [10]
+BSP_USBPD_PWR_VBUSInit   0x800'7247   0xd6  Code  Gb  seahorse_usbpd_pwr.o [10]
 BusFault_Handler         0x800'84f7    0x2  Code  Gb  stm32u5xx_it.o [5]
-CAD_Check_HW_SNK         0x800'6fb3   0x7a  Code  Lc  usbpd_cad_hw_if.o [10]
-CAD_HW_Handles          0x2000'2004    0xc  Data  Lc  usbpd_cad_hw_if.o [10]
+CAD_Check_HW_SNK         0x800'6fb3   0x7a  Code  Lc  usbpd_cad_hw_if.o [9]
+CAD_HW_Handles          0x2000'2004    0xc  Data  Lc  usbpd_cad_hw_if.o [9]
 CAD_Handles             0x2000'2010    0x8  Data  Lc  usbpd_cad.o [13]
-CAD_Init                 0x800'6cf3   0xf0  Code  Gb  usbpd_cad_hw_if.o [10]
-CAD_StateMachine         0x800'6f55   0x5e  Code  Gb  usbpd_cad_hw_if.o [10]
-CAD_StateMachine_SNK     0x800'6de5  0x162  Code  Lc  usbpd_cad_hw_if.o [10]
+CAD_Init                 0x800'6cf3   0xf0  Code  Gb  usbpd_cad_hw_if.o [9]
+CAD_StateMachine         0x800'6f55   0x5e  Code  Gb  usbpd_cad_hw_if.o [9]
+CAD_StateMachine_SNK     0x800'6de5  0x162  Code  Lc  usbpd_cad_hw_if.o [9]
 CDC_Desc                0x2000'1194   0x1c  Data  Gb  usbd_desc.o [1]
 CDC_Itf_Control          0x800'37f9   0xc0  Code  Lc  usbd_cdc_if.o [1]
 CDC_Itf_DeInit           0x800'37ed    0xc  Code  Lc  usbd_cdc_if.o [1]
@@ -858,9 +858,9 @@ HAL_UART_TxHalfCpltCallback
 HASH_IRQHandler          0x800'87d5         Code  Wk  startup_stm32u575xx.o [7]
 HEAP$$Base              0x2000'2428          --   Gb  - Linker created -
 HEAP$$Limit             0x2000'2628          --   Gb  - Linker created -
-HW_IF_PWR_GetVoltage     0x800'8145    0xe  Code  Gb  usbpd_pwr_hw_if.o [10]
-HW_SignalAttachement     0x800'6019    0xc  Code  Gb  usbpd_phy_hw_if.o [10]
-HW_SignalDetachment      0x800'6025    0xe  Code  Gb  usbpd_phy_hw_if.o [10]
+HW_IF_PWR_GetVoltage     0x800'8145    0xe  Code  Gb  usbpd_pwr_hw_if.o [9]
+HW_SignalAttachement     0x800'6019    0xc  Code  Gb  usbpd_phy_hw_if.o [9]
+HW_SignalDetachment      0x800'6025    0xe  Code  Gb  usbpd_phy_hw_if.o [9]
 HardFault_Handler        0x800'84f3    0x2  Code  Gb  stm32u5xx_it.o [5]
 I2C1_ER_IRQHandler       0x800'873d         Code  Wk  startup_stm32u575xx.o [7]
 I2C1_EV_IRQHandler       0x800'8739         Code  Wk  startup_stm32u575xx.o [7]
@@ -880,13 +880,13 @@ LL_ADC_SetChannelSamplingTime
 LL_ADC_SetSamplingTimeCommonChannels
                          0x800'7409   0x18  Code  Lc  stm32u5xx_hal_adc.o [8]
 LL_AHB2_GRP1_EnableClock
-                         0x800'71bd   0x16  Code  Lc  stm32u5xx_nucleo_usbpd_pwr.o [9]
+                         0x800'71bd   0x16  Code  Lc  seahorse_usbpd_pwr.o [10]
 LL_AHB2_GRP1_EnableClock
-                         0x800'6ca9   0x18  Code  Lc  usbpd_cad_hw_if.o [10]
-LL_GPIO_SetPinMode       0x800'71d3   0x10  Code  Lc  stm32u5xx_nucleo_usbpd_pwr.o [9]
-LL_GPIO_SetPinMode       0x800'6cc1   0x10  Code  Lc  usbpd_cad_hw_if.o [10]
-LL_GPIO_SetPinPull       0x800'71e3   0x10  Code  Lc  stm32u5xx_nucleo_usbpd_pwr.o [9]
-LL_GPIO_SetPinPull       0x800'6cd1   0x10  Code  Lc  usbpd_cad_hw_if.o [10]
+                         0x800'6ca9   0x18  Code  Lc  usbpd_cad_hw_if.o [9]
+LL_GPIO_SetPinMode       0x800'71d3   0x10  Code  Lc  seahorse_usbpd_pwr.o [10]
+LL_GPIO_SetPinMode       0x800'6cc1   0x10  Code  Lc  usbpd_cad_hw_if.o [9]
+LL_GPIO_SetPinPull       0x800'71e3   0x10  Code  Lc  seahorse_usbpd_pwr.o [10]
+LL_GPIO_SetPinPull       0x800'6cd1   0x10  Code  Lc  usbpd_cad_hw_if.o [9]
 LL_UCPD_Init             0x800'7159   0x44  Code  Gb  stm32u5xx_ll_ucpd.o [8]
 LL_UCPD_StructInit       0x800'71a9   0x14  Code  Gb  stm32u5xx_ll_ucpd.o [8]
 LPDMA1_Channel0_IRQHandler
@@ -912,7 +912,7 @@ MDF1_FLT3_IRQHandler     0x800'87f9         Code  Wk  startup_stm32u575xx.o [7]
 MDF1_FLT4_IRQHandler     0x800'8835         Code  Wk  startup_stm32u575xx.o [7]
 MDF1_FLT5_IRQHandler     0x800'8839         Code  Wk  startup_stm32u575xx.o [7]
 MSIRangeTable            0x800'84b0   0x40  Data  Gb  system_stm32u5xx.o [3]
-MX_ADC1_Init::hadc1     0x2000'1dfc   0xb8  Data  Lc  stm32u5xx_nucleo_usbpd_pwr.o [9]
+MX_ADC1_Init::hadc1     0x2000'1dfc   0xb8  Data  Lc  seahorse_usbpd_pwr.o [10]
 MX_USBPD_Init            0x800'611d   0x14  Code  Gb  usbpd.o [12]
 MX_USB_Device_Init       0x800'60cd   0x3a  Code  Gb  usb_device.o [1]
 MemManage_Handler        0x800'84f5    0x2  Code  Gb  stm32u5xx_it.o [5]
@@ -923,13 +923,13 @@ OTFDEC1_IRQHandler       0x800'8801         Code  Wk  startup_stm32u575xx.o [7]
 OTFDEC2_IRQHandler       0x800'8805         Code  Wk  startup_stm32u575xx.o [7]
 OTG_FS_IRQHandler        0x800'8509    0x6  Code  Gb  stm32u5xx_it.o [5]
 PKA_IRQHandler           0x800'87d9         Code  Wk  startup_stm32u575xx.o [7]
-PORTx_IRQHandler         0x800'8157  0x15c  Code  Gb  usbpd_hw_if_it.o [10]
+PORTx_IRQHandler         0x800'8157  0x15c  Code  Gb  usbpd_hw_if_it.o [9]
 PORTx_IRQHandler::ovrflag
-                        0x2000'2025    0x1  Data  Lc  usbpd_hw_if_it.o [10]
+                        0x2000'2025    0x1  Data  Lc  usbpd_hw_if_it.o [9]
 PVD_PVM_IRQHandler       0x800'8669         Code  Wk  startup_stm32u575xx.o [7]
 PWR_S3WU_IRQHandler      0x800'8789         Code  Wk  startup_stm32u575xx.o [7]
 PendSV_Handler           0x800'84ff    0x2  Code  Gb  stm32u5xx_it.o [5]
-Ports                   0x2000'1fbc   0x38  Data  Gb  usbpd_phy_hw_if.o [10]
+Ports                   0x2000'1fbc   0x38  Data  Gb  usbpd_phy_hw_if.o [9]
 RAMCFG_IRQHandler        0x800'8679         Code  Wk  startup_stm32u575xx.o [7]
 RCCEx_PLL2_Config        0x800'1041   0x68  Code  Lc  stm32u5xx_hal_rcc_ex.o [8]
 RCCEx_PLL3_Config        0x800'10d7   0x6e  Code  Lc  stm32u5xx_hal_rcc_ex.o [8]
@@ -1109,7 +1109,7 @@ USBD_static_free         0x800'477d    0x2  Code  Gb  usbd_conf.o [11]
 USBD_static_malloc       0x800'475d    0x4  Code  Gb  usbd_conf.o [11]
 USBD_static_malloc::mem
                         0x2000'18bc  0x220  Data  Lc  usbd_conf.o [11]
-USBPDM1_AssertRd         0x800'5fa1   0x70  Code  Gb  usbpd_phy_hw_if.o [10]
+USBPDM1_AssertRd         0x800'5fa1   0x70  Code  Gb  usbpd_phy_hw_if.o [9]
 USBPD_CAD_GetMemoryConsumption
                          0x800'6c21    0x4  Code  Gb  usbpd_cad.o [13]
 USBPD_CAD_Init           0x800'6ae9   0x5a  Code  Gb  usbpd_cad.o [13]
@@ -1128,16 +1128,16 @@ USBPD_DPM_UserCableDetection
                          0x800'6c3d    0x2  Code  Gb  usbpd_dpm_user.o [12]
 USBPD_DPM_UserExecute    0x800'6c25   0x14  Code  Gb  usbpd_dpm_user.o [12]
 USBPD_HW_GetUSPDInstance
-                         0x800'7151    0x4  Code  Gb  usbpd_hw.o [10]
+                         0x800'7151    0x4  Code  Gb  usbpd_hw.o [9]
 USBPD_HW_IF_GlobalHwInit
-                         0x800'5f75   0x2c  Code  Gb  usbpd_phy_hw_if.o [10]
+                         0x800'5f75   0x2c  Code  Gb  usbpd_phy_hw_if.o [9]
 USBPD_PE_CheckLIB        0x800'6acd    0xe  Code  Gb  usbpd_pe_lib.o [13]
 USBPD_PE_GetMemoryConsumption
                          0x800'6ae1    0x8  Code  Gb  usbpd_pe_lib.o [13]
-USBPD_PORT0_IRQHandler   0x800'8155    0x2  Code  Gb  usbpd_hw_if_it.o [10]
+USBPD_PORT0_IRQHandler   0x800'8155    0x2  Code  Gb  usbpd_hw_if_it.o [9]
 USBPD_PWR_IF_GetVBUSStatus
                          0x800'73d5   0x30  Code  Gb  usbpd_pwr_if.o [12]
-USBPD_TRACE_Add          0x800'7405    0x2  Code  Gb  usbpd_trace.o [10]
+USBPD_TRACE_Add          0x800'7405    0x2  Code  Gb  usbpd_trace.o [9]
 USBPD_USBIF_DeviceStart
                          0x800'704d   0x24  Code  Gb  usbpd_usb_if.o [12]
 USBPD_USBIF_DeviceStop   0x800'7071   0x1e  Code  Gb  usbpd_usb_if.o [12]
@@ -1236,8 +1236,8 @@ uwTickPrio              0x2000'0008    0x4  Data  Gb  stm32u5xx_hal.o [8]
 [6] = C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Core_9232119672538125435.dir
 [7] = C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\EWARM_18443280873093131863.dir
 [8] = C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir
-[9] = C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_Nucleo_17360961038387864367.dir
-[10] = C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32_USBPD_Library_10637878860516305910.dir
+[9] = C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32_USBPD_Library_10637878860516305910.dir
+[10] = C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Seahorse_v1_13032176894571403394.dir
 [11] = C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Target_14167004246567845465.dir
 [12] = C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\USB-PD_16088497327023206971.dir
 [13] = USBPDCORE_NOPD_CM0PLUS_wc32.a

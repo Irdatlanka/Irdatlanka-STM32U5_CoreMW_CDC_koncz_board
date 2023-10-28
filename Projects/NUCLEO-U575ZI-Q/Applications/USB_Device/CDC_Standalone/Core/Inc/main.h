@@ -47,8 +47,12 @@ extern "C" {
 */
 
 /* Private includes ----------------------------------------------------------*/
+  //koncz_change: BSP valasztas
+#ifndef TARGET_KONCZBOARD
 #include "stm32u5xx_nucleo.h"
-
+#else
+#include "seahorse.h"
+#endif 
 /* Exported types ------------------------------------------------------------*/
 
 
