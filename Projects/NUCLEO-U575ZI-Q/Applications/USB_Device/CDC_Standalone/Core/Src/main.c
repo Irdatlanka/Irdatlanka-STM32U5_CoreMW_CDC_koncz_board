@@ -118,7 +118,7 @@ int main(void)
   while (1)
   {
 
-    /* Run the detection state machine */
+#if 0
     HAL_GPIO_WritePin(led_iolink1_g_GPIO_Port, led_iolink1_g_Pin, GPIO_PIN_SET);
     HAL_Delay(1000);
     HAL_GPIO_WritePin(led_iolink1_g_GPIO_Port, led_iolink1_g_Pin, GPIO_PIN_RESET);
@@ -138,9 +138,14 @@ int main(void)
     HAL_GPIO_WritePin(led_usb_GPIO_Port, led_usb_Pin, GPIO_PIN_SET);
     HAL_Delay(1000);
     HAL_GPIO_WritePin(led_usb_GPIO_Port, led_usb_Pin, GPIO_PIN_RESET);
-        
+#endif
     
-    //BSP_LedTest();
+    if (BSP_LedTest() != BSP_ERROR_NONE)
+    {
+      Error_Handler();
+    }
+    
+/* Run the detection state machine */
     USBPD_DPM_Run();
   }
 }
@@ -689,9 +694,9 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, led_iolink1_g_Pin|led_iolink1_r_Pin|led_pwr_fault_Pin|usbdb__Pin
-                          |tps272_en1_Pin|tps272_en2_Pin|GPIO_PIN_8|txena_Pin
-                          |txenb_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, led_iolink1_g_Pin|led_iolink1_r_Pin|led_pwr_ok_Pin|led_pwr_fault_Pin
+                          |usbdb__Pin|tps272_en1_Pin|tps272_en2_Pin|tps272_latch_Pin
+                          |txena_Pin|txenb_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, boost_shdn__Pin|led_usb_Pin, GPIO_PIN_RESET);
@@ -702,30 +707,22 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(spi1_cs__GPIO_Port, spi1_cs__Pin, GPIO_PIN_SET);
 
-  /*Configure GPIO pins : PC13 led_pwr_ok_Pin usbflt__Pin */
-  GPIO_InitStruct.Pin = GPIO_PIN_13|led_pwr_ok_Pin|usbflt__Pin;
+  /*Configure GPIO pins : iolink_irq__Pin usbflt__Pin */
+  GPIO_InitStruct.Pin = iolink_irq__Pin|usbflt__Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : led_iolink1_g_Pin led_iolink1_r_Pin led_pwr_fault_Pin usbdb__Pin
-                           tps272_en1_Pin tps272_en2_Pin PC8 txena_Pin
-                           txenb_Pin */
-  GPIO_InitStruct.Pin = led_iolink1_g_Pin|led_iolink1_r_Pin|led_pwr_fault_Pin|usbdb__Pin
-                          |tps272_en1_Pin|tps272_en2_Pin|GPIO_PIN_8|txena_Pin
-                          |txenb_Pin;
+  /*Configure GPIO pins : led_iolink1_g_Pin led_iolink1_r_Pin led_pwr_ok_Pin led_pwr_fault_Pin
+                           usbdb__Pin tps272_en1_Pin tps272_en2_Pin tps272_latch_Pin
+                           txena_Pin txenb_Pin */
+  GPIO_InitStruct.Pin = led_iolink1_g_Pin|led_iolink1_r_Pin|led_pwr_ok_Pin|led_pwr_fault_Pin
+                          |usbdb__Pin|tps272_en1_Pin|tps272_en2_Pin|tps272_latch_Pin
+                          |txena_Pin|txenb_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : PA0 */
-  GPIO_InitStruct.Pin = GPIO_PIN_0;
-  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  GPIO_InitStruct.Alternate = GPIO_AF13_SAI1;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pin : boost_shdn__Pin */
   GPIO_InitStruct.Pin = boost_shdn__Pin;
@@ -741,11 +738,11 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : tps272_flt__Pin PB6 */
-  GPIO_InitStruct.Pin = tps272_flt__Pin|GPIO_PIN_6;
+  /*Configure GPIO pin : tps272_flt__Pin */
+  GPIO_InitStruct.Pin = tps272_flt__Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+  HAL_GPIO_Init(tps272_flt__GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : vin_ext_en_Pin tps272_dia_en_Pin tps272_sel_Pin */
   GPIO_InitStruct.Pin = vin_ext_en_Pin|tps272_dia_en_Pin|tps272_sel_Pin;
@@ -763,7 +760,6 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
 }
-
 
 
 

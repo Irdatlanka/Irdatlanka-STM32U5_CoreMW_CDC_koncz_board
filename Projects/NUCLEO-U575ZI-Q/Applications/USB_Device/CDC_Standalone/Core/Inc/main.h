@@ -68,7 +68,9 @@ void Error_Handler(void);
 
 
 /* Private defines -----------------------------------------------------------*/
-//koncz
+//koncz_change
+#define iolink_irq__Pin GPIO_PIN_13
+#define iolink_irq__GPIO_Port GPIOC
 #define led_iolink1_g_Pin GPIO_PIN_0
 #define led_iolink1_g_GPIO_Port GPIOC
 #define led_iolink1_r_Pin GPIO_PIN_1
@@ -103,6 +105,8 @@ void Error_Handler(void);
 #define tps272_en1_GPIO_Port GPIOC
 #define tps272_en2_Pin GPIO_PIN_7
 #define tps272_en2_GPIO_Port GPIOC
+#define tps272_latch_Pin GPIO_PIN_8
+#define tps272_latch_GPIO_Port GPIOC
 #define txena_Pin GPIO_PIN_9
 #define txena_GPIO_Port GPIOC
 #define spi1_cs__Pin GPIO_PIN_8
@@ -111,6 +115,7 @@ void Error_Handler(void);
 #define lia_GPIO_Port GPIOA
 #define txenb_Pin GPIO_PIN_11
 #define txenb_GPIO_Port GPIOC
+
 
 #ifdef __cplusplus
 }
