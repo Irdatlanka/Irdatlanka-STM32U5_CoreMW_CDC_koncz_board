@@ -28,10 +28,10 @@ extern "C" {
 #include "stm32u5xx_hal.h"
 
 /* Usage of nucleo board */
-#define USE_NUCLEO_144      1U
+//#define USE_NUCLEO_144      1U //koncz_change
 
 /* Usage of COM feature */
-#define USE_BSP_COM_FEATURE 1U
+#define USE_BSP_COM_FEATURE 0U //koncz_change
 #define USE_COM_LOG         0U
 
 /* Button user interrupt priority */

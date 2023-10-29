@@ -119,7 +119,28 @@ int main(void)
   {
 
     /* Run the detection state machine */
+    HAL_GPIO_WritePin(led_iolink1_g_GPIO_Port, led_iolink1_g_Pin, GPIO_PIN_SET);
+    HAL_Delay(1000);
+    HAL_GPIO_WritePin(led_iolink1_g_GPIO_Port, led_iolink1_g_Pin, GPIO_PIN_RESET);
     
+    HAL_GPIO_WritePin(led_iolink1_r_GPIO_Port, led_iolink1_r_Pin, GPIO_PIN_SET);
+    HAL_Delay(1000);
+    HAL_GPIO_WritePin(led_iolink1_r_GPIO_Port, led_iolink1_r_Pin, GPIO_PIN_RESET);
+    
+    HAL_GPIO_WritePin(led_pwr_ok_GPIO_Port, led_pwr_ok_Pin, GPIO_PIN_SET);
+    HAL_Delay(1000);
+    HAL_GPIO_WritePin(led_pwr_ok_GPIO_Port, led_pwr_ok_Pin, GPIO_PIN_RESET);
+    
+    HAL_GPIO_WritePin(led_pwr_fault_GPIO_Port, led_pwr_fault_Pin, GPIO_PIN_SET);
+    HAL_Delay(1000);
+    HAL_GPIO_WritePin(led_pwr_fault_GPIO_Port, led_pwr_fault_Pin, GPIO_PIN_RESET);
+    
+    HAL_GPIO_WritePin(led_usb_GPIO_Port, led_usb_Pin, GPIO_PIN_SET);
+    HAL_Delay(1000);
+    HAL_GPIO_WritePin(led_usb_GPIO_Port, led_usb_Pin, GPIO_PIN_RESET);
+        
+    
+    //BSP_LedTest();
     USBPD_DPM_Run();
   }
 }
