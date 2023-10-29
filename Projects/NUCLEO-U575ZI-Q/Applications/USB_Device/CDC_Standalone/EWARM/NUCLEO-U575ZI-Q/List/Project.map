@@ -1,82 +1,82 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.40.2.374/W64 for ARM                  28/Oct/2023  21:47:17
+# IAR ELF Linker V9.40.2.374/W64 for ARM                  29/Oct/2023  17:46:42
 # Copyright 2007-2023 IAR Systems AB.
 #
 #    Output file  =
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Exe\Project.out
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Exe\Project.out
 #    Map file     =
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\List\Project.map
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\List\Project.map
 #    Command line =
 #        -f
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Exe\Project.out.rsp
-#        (C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Core_13247989168731456611.dir\main.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Components_1361118596739929299.dir\mfxstm32l152.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Components_1361118596739929299.dir\mfxstm32l152_reg.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Seahorse_v1_13032176894571403394.dir\seahorse.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Seahorse_v1_13032176894571403394.dir\seahorse_usbpd_pwr.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\EWARM_18443280873093131863.dir\startup_stm32u575xx.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_adc.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_adc_ex.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_cortex.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_dcache.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_dma.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_dma_ex.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_exti.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_gpio.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_i2c.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_i2c_ex.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_icache.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Core_13247989168731456611.dir\stm32u5xx_hal_msp.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_pcd.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_pcd_ex.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_pwr.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_pwr_ex.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_rcc.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_rcc_ex.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_spi.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_spi_ex.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_tim.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_tim_ex.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_uart.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_uart_ex.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_usart.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_usart_ex.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Core_13247989168731456611.dir\stm32u5xx_it.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_ll_gpio.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_ll_ucpd.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_ll_usb.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\CMSIS_6603591812247902717.dir\system_stm32u5xx.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\App_6612947199827748718.dir\usb_device.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\CDC_16681379477064853705.dir\usbd_cdc.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\App_6612947199827748718.dir\usbd_cdc_if.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Target_14167004246567845465.dir\usbd_conf.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Core_9232119672538125435.dir\usbd_core.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Core_9232119672538125435.dir\usbd_ctlreq.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\App_6612947199827748718.dir\usbd_desc.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Core_9232119672538125435.dir\usbd_ioreq.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\USB-PD_16088497327023206971.dir\usbpd.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32_USBPD_Library_10637878860516305910.dir\usbpd_cad_hw_if.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\USB-PD_16088497327023206971.dir\usbpd_dpm_core.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\USB-PD_16088497327023206971.dir\usbpd_dpm_user.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32_USBPD_Library_10637878860516305910.dir\usbpd_hw.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32_USBPD_Library_10637878860516305910.dir\usbpd_hw_if_it.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32_USBPD_Library_10637878860516305910.dir\usbpd_phy_hw_if.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32_USBPD_Library_10637878860516305910.dir\usbpd_pwr_hw_if.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\USB-PD_16088497327023206971.dir\usbpd_pwr_if.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32_USBPD_Library_10637878860516305910.dir\usbpd_trace.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\USB-PD_16088497327023206971.dir\usbpd_usb_if.o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Middlewares\ST\STM32_USBPD_Library\Core\lib\USBPDCORE_NOPD_CM0PLUS_wc32.a
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Exe\Project.out.rsp
+#        (C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Core_13247989168731456611.dir\main.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Components_1361118596739929299.dir\mfxstm32l152.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Components_1361118596739929299.dir\mfxstm32l152_reg.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Seahorse_v1_13032176894571403394.dir\seahorse.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Seahorse_v1_13032176894571403394.dir\seahorse_usbpd_pwr.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\EWARM_18443280873093131863.dir\startup_stm32u575xx.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_adc.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_adc_ex.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_cortex.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_dcache.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_dma.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_dma_ex.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_exti.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_gpio.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_i2c.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_i2c_ex.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_icache.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Core_13247989168731456611.dir\stm32u5xx_hal_msp.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_pcd.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_pcd_ex.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_pwr.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_pwr_ex.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_rcc.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_rcc_ex.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_spi.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_spi_ex.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_tim.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_tim_ex.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_uart.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_uart_ex.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_usart.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_usart_ex.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Core_13247989168731456611.dir\stm32u5xx_it.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_ll_gpio.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_ll_ucpd.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_ll_usb.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\CMSIS_6603591812247902717.dir\system_stm32u5xx.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\App_6612947199827748718.dir\usb_device.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\CDC_16681379477064853705.dir\usbd_cdc.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\App_6612947199827748718.dir\usbd_cdc_if.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Target_14167004246567845465.dir\usbd_conf.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Core_9232119672538125435.dir\usbd_core.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Core_9232119672538125435.dir\usbd_ctlreq.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\App_6612947199827748718.dir\usbd_desc.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Core_9232119672538125435.dir\usbd_ioreq.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\USB-PD_16088497327023206971.dir\usbpd.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32_USBPD_Library_10637878860516305910.dir\usbpd_cad_hw_if.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\USB-PD_16088497327023206971.dir\usbpd_dpm_core.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\USB-PD_16088497327023206971.dir\usbpd_dpm_user.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32_USBPD_Library_10637878860516305910.dir\usbpd_hw.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32_USBPD_Library_10637878860516305910.dir\usbpd_hw_if_it.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32_USBPD_Library_10637878860516305910.dir\usbpd_phy_hw_if.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32_USBPD_Library_10637878860516305910.dir\usbpd_pwr_hw_if.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\USB-PD_16088497327023206971.dir\usbpd_pwr_if.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32_USBPD_Library_10637878860516305910.dir\usbpd_trace.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\USB-PD_16088497327023206971.dir\usbpd_usb_if.o
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Middlewares\ST\STM32_USBPD_Library\Core\lib\USBPDCORE_NOPD_CM0PLUS_wc32.a
 #        --printf_multibytes --scanf_multibytes --no_out_extension -o
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Exe\Project.out
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Exe\Project.out
 #        --map
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\List\Project.map
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\List\Project.map
 #        --config
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\stm32u575xx_flash.icf
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\stm32u575xx_flash.icf
 #        --semihosting --entry __iar_program_start --vfe --text_out locale
 #        --cpu=Cortex-M33.no_dsp.no_se --fpu=VFPv5_sp) --dependencies=n
-#        C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Exe\Project.out.iar_deps
+#        C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Exe\Project.out.iar_deps
 #
 ###############################################################################
 
@@ -428,47 +428,47 @@ command line/config:
     --------------------------------------------------
     Total:
 
-C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\App_6612947199827748718.dir: [1]
+C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\App_6612947199827748718.dir: [1]
     usb_device.o                 224               720
     usbd_cdc_if.o                486      253    4'356
     usbd_desc.o                  264        5      592
     --------------------------------------------------
     Total:                       974      258    5'668
 
-C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\CDC_16681379477064853705.dir: [2]
+C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\CDC_16681379477064853705.dir: [2]
     usbd_cdc.o                   776       17      272
     --------------------------------------------------
     Total:                       776       17      272
 
-C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\CMSIS_6603591812247902717.dir: [3]
+C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\CMSIS_6603591812247902717.dir: [3]
     system_stm32u5xx.o            92       72        4
     --------------------------------------------------
     Total:                        92       72        4
 
-C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Components_1361118596739929299.dir: [4]
+C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Components_1361118596739929299.dir: [4]
     --------------------------------------------------
     Total:
 
-C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Core_13247989168731456611.dir: [5]
+C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Core_13247989168731456611.dir: [5]
     main.o                       748               288
     stm32u5xx_hal_msp.o          356               120
     stm32u5xx_it.o                64
     --------------------------------------------------
     Total:                     1'168               408
 
-C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Core_9232119672538125435.dir: [6]
+C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Core_9232119672538125435.dir: [6]
     usbd_core.o                  740
     usbd_ctlreq.o              1'164                 1
     usbd_ioreq.o                 100
     --------------------------------------------------
     Total:                     2'004                 1
 
-C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\EWARM_18443280873093131863.dir: [7]
+C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\EWARM_18443280873093131863.dir: [7]
     startup_stm32u575xx.o      1'072
     --------------------------------------------------
     Total:                     1'072
 
-C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir: [8]
+C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir: [8]
     stm32u5xx_hal.o              186                12
     stm32u5xx_hal_adc.o        3'182
     stm32u5xx_hal_adc_ex.o       206
@@ -493,7 +493,7 @@ C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applicatio
     --------------------------------------------------
     Total:                    24'196      128       12
 
-C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32_USBPD_Library_10637878860516305910.dir: [9]
+C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32_USBPD_Library_10637878860516305910.dir: [9]
     usbpd_cad_hw_if.o            932                12
     usbpd_hw.o                     8
     usbpd_hw_if_it.o             374                 1
@@ -503,17 +503,17 @@ C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applicatio
     --------------------------------------------------
     Total:                     1'530                69
 
-C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Seahorse_v1_13032176894571403394.dir: [10]
+C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Seahorse_v1_13032176894571403394.dir: [10]
     seahorse_usbpd_pwr.o         536               184
     --------------------------------------------------
     Total:                       536               184
 
-C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Target_14167004246567845465.dir: [11]
+C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Target_14167004246567845465.dir: [11]
     usbd_conf.o                  572             1'576
     --------------------------------------------------
     Total:                       572             1'576
 
-C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\USB-PD_16088497327023206971.dir: [12]
+C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\USB-PD_16088497327023206971.dir: [12]
     usbpd.o                       20
     usbpd_dpm_core.o             212                20
     usbpd_dpm_user.o              44
@@ -1228,18 +1228,18 @@ uwTickFreq              0x2000'0000    0x1  Data  Gb  stm32u5xx_hal.o [8]
 uwTickPrio              0x2000'0008    0x4  Data  Gb  stm32u5xx_hal.o [8]
 
 
-[1] = C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\App_6612947199827748718.dir
-[2] = C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\CDC_16681379477064853705.dir
-[3] = C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\CMSIS_6603591812247902717.dir
-[4] = C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Components_1361118596739929299.dir
-[5] = C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Core_13247989168731456611.dir
-[6] = C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Core_9232119672538125435.dir
-[7] = C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\EWARM_18443280873093131863.dir
-[8] = C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir
-[9] = C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32_USBPD_Library_10637878860516305910.dir
-[10] = C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Seahorse_v1_13032176894571403394.dir
-[11] = C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Target_14167004246567845465.dir
-[12] = C:\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\USB-PD_16088497327023206971.dir
+[1] = C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\App_6612947199827748718.dir
+[2] = C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\CDC_16681379477064853705.dir
+[3] = C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\CMSIS_6603591812247902717.dir
+[4] = C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Components_1361118596739929299.dir
+[5] = C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Core_13247989168731456611.dir
+[6] = C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Core_9232119672538125435.dir
+[7] = C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\EWARM_18443280873093131863.dir
+[8] = C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32U5xx_HAL_Driver_18077472236357910042.dir
+[9] = C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\STM32_USBPD_Library_10637878860516305910.dir
+[10] = C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Seahorse_v1_13032176894571403394.dir
+[11] = C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\Target_14167004246567845465.dir
+[12] = C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\NUCLEO-U575ZI-Q\Obj\USB-PD_16088497327023206971.dir
 [13] = USBPDCORE_NOPD_CM0PLUS_wc32.a
 [14] = dl7M_tlf.a
 [15] = m7M_tls.a
