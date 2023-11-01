@@ -30,41 +30,13 @@ extern "C" {
 #include "seahorse_conf.h"
 #include "seahorse_errno.h"
 
-// #if (USE_BSP_COM_FEATURE > 0)
-// #if (USE_COM_LOG > 0)
-// #ifndef __GNUC__
-// #include <stdio.h>
-// #endif /* __GNUC__ */
-// #endif /* USE_COM_LOG */
-// #endif /* USE_BSP_COM_FEATURE */
 
-/** @addtogroup BSP
-  * @{
-  */
-
-/** @defgroup STM32U5XX_NUCLEO STM32U5XX_NUCLEO
-  * @{
-  */
-
-/** @defgroup STM32U5XX_NUCLEO_LOW_LEVEL LOW LEVEL
-  * @{
-  */
-
-/**
-  * @brief Define for STM32U5XX_NUCLEO board
-  */
 #if !defined (USE_SEAHORSE) //koncz_change
 #define USE_SEAHORSE
 #endif /* !defined (USE_SEAHORSE) */
 
-// #if !defined (USE_NUCLEO_144) //koncz_change
-// #error "Board Pin number not defined!! Add USE_NUCLEO_144 define within stm32u5xx_nucleo_conf.h file"
-// #endif /* !defined (USE_NUCLEO_144) */
 
-/** @defgroup STM32U5XX_NUCLEO_LOW_LEVEL_Exported_Types LOW LEVEL Exported Types
-  * @{
-  */
-
+// LEDs in order from right to left
 typedef enum
 {
   LED1 = 0,
@@ -77,103 +49,13 @@ typedef enum
   led_pwr_fault = LED4,
   LED5 = 4,
   led_usb = LED5,
-  LEDn
+  LEDn//fontos, mert ez tarolja a LEDek szamat!
 } Led_TypeDef;
 
-// typedef enum //koncz_change
-// {
-  // BUTTON_USER = 0U,
-  // BUTTONn
-// } Button_TypeDef;
 
-// typedef enum
-// {
-  // BUTTON_MODE_GPIO = 0,
-  // BUTTON_MODE_EXTI = 1
-// } ButtonMode_TypeDef;
-
-// #if (USE_BSP_COM_FEATURE > 0) //koncz_change: ezek nem kellenek
-// typedef enum
-// {
-  // COM1 = 0U,
-  // COMn
-// } COM_TypeDef;
-
-// typedef enum
-// {
-  // COM_STOPBITS_1     =   UART_STOPBITS_1,
-  // COM_STOPBITS_2     =   UART_STOPBITS_2,
-// } COM_StopBitsTypeDef;
-
-// typedef enum
-// {
-  // COM_PARITY_NONE     =  UART_PARITY_NONE,
-  // COM_PARITY_EVEN     =  UART_PARITY_EVEN,
-  // COM_PARITY_ODD      =  UART_PARITY_ODD,
-// } COM_ParityTypeDef;
-
-// typedef enum
-// {
-  // COM_HWCONTROL_NONE    =  UART_HWCONTROL_NONE,
-  // COM_HWCONTROL_RTS     =  UART_HWCONTROL_RTS,
-  // COM_HWCONTROL_CTS     =  UART_HWCONTROL_CTS,
-  // COM_HWCONTROL_RTS_CTS =  UART_HWCONTROL_RTS_CTS,
-// } COM_HwFlowCtlTypeDef;
-
-// typedef enum
-// {
-  // COM_WORDLENGTH_7B = UART_WORDLENGTH_7B,
-  // COM_WORDLENGTH_8B = UART_WORDLENGTH_8B,
-  // COM_WORDLENGTH_9B = UART_WORDLENGTH_9B,
-// } COM_WordLengthTypeDef;
-
-// typedef struct
-// {
-  // uint32_t               BaudRate;
-  // COM_WordLengthTypeDef  WordLength;
-  // COM_StopBitsTypeDef    StopBits;
-  // COM_ParityTypeDef      Parity;
-  // COM_HwFlowCtlTypeDef   HwFlowCtl;
-// } COM_InitTypeDef;
-
-// #if (USE_HAL_UART_REGISTER_CALLBACKS == 1)
-// typedef struct
-// {
-  // void (* pMspInitCb)(UART_HandleTypeDef *);
-  // void (* pMspDeInitCb)(UART_HandleTypeDef *);
-// } BSP_COM_Cb_t;
-// #endif /* (USE_HAL_UART_REGISTER_CALLBACKS == 1) */
-
-// #define MX_UART_InitTypeDef COM_InitTypeDef
-
-// #endif /* USE_BSP_COM_FEATURE */
-
-/**
-  * @}
-  */
-
-/** @defgroup STM32U5XX_NUCLEO_LOW_LEVEL_Exported_Constants LOW LEVEL Exported Constants
-  * @{
-  */
-
-/**
-  * @brief STM32U5XX NUCLEO BSP Driver version number V1.0.0
-  */ //koncz_change
-// #define STM32U5XX_NUCLEO_BSP_VERSION_MAIN   (0x01U) /*!< [31:24] main version */
-// #define STM32U5XX_NUCLEO_BSP_VERSION_SUB1   (0x00U) /*!< [23:16] sub1 version */
-// #define STM32U5XX_NUCLEO_BSP_VERSION_SUB2   (0x00U) /*!< [15:8]  sub2 version */
-// #define STM32U5XX_NUCLEO_BSP_VERSION_RC     (0x00U) /*!< [7:0]  release candidate */
-// #define STM32U5XX_NUCLEO_BSP_VERSION        ((STM32U5XX_NUCLEO_BSP_VERSION_MAIN << 24)\
-                                             // |(STM32U5XX_NUCLEO_BSP_VERSION_SUB1 << 16)\
-                                             // |(STM32U5XX_NUCLEO_BSP_VERSION_SUB2 << 8 )\
-                                             // |(STM32U5XX_NUCLEO_BSP_VERSION_RC))
-
-// #define STM32U5XX_NUCLEO_BSP_BOARD_NAME  "NUCLEO-U575ZI-Q";
-// #define STM32U5XX_NUCLEO_BSP_BOARD_ID    "MB1549A";
 #define BSP_BOARD_NAME "Seahorse_v1"
-/** @defgroup STM32U5XX_NUCLEO_LOW_LEVEL_LED LOW LEVEL LED
-  * @{
-  */
+
+
 #define LED1_PIN                                GPIO_PIN_0
 #define LED1_GPIO_PORT                          GPIOC
 // #define LED1_GPIO_CLK_ENABLE()                  __HAL_RCC_GPIOC_CLK_ENABLE()
@@ -195,80 +77,9 @@ typedef enum
 #define LED5_PIN                                GPIO_PIN_3
 #define LED5_GPIO_PORT                          GPIOA
 
-/**
-  * @}
-  */
 
-/** @defgroup STM32U5XX_NUCLEO_LOW_LEVEL_BUTTON LOW LEVEL BUTTON
-  * @{
-  */
-/* Button state */
-// #define BUTTON_RELEASED                    0U
-// #define BUTTON_PRESSED                     1U
 
-/**
-  * @brief Key push-button
-  */
-// #define BUTTON_USER_PIN                       GPIO_PIN_13
-// #define BUTTON_USER_GPIO_PORT                 GPIOC
-// #define BUTTON_USER_GPIO_CLK_ENABLE()         __HAL_RCC_GPIOC_CLK_ENABLE()
-// #define BUTTON_USER_GPIO_CLK_DISABLE()        __HAL_RCC_GPIOC_CLK_DISABLE()
-// #define BUTTON_USER_EXTI_IRQn                 EXTI13_IRQn
-// #define BUTTON_USER_EXTI_LINE                 EXTI_LINE_13
 
-/**
-  * @}
-  */
-
-/** @defgroup STM32U5XX_NUCLEO_LOW_LEVEL_COM LOW LEVEL COM
-  * @{
-  */
-/**
-  * @brief Definition for COM port1, connected to UART1
-  */
-// #if (USE_BSP_COM_FEATURE > 0) //koncz_change
-// #define COM1_UART                     USART1
-// #define COM1_CLK_ENABLE()             __HAL_RCC_USART1_CLK_ENABLE()
-// #define COM1_CLK_DISABLE()            __HAL_RCC_USART1_CLK_DISABLE()
-
-// #define COM1_TX_PIN                   GPIO_PIN_9
-// #define COM1_TX_GPIO_PORT             GPIOA
-// #define COM1_TX_GPIO_CLK_ENABLE()     __HAL_RCC_GPIOA_CLK_ENABLE()
-// #define COM1_TX_GPIO_CLK_DISABLE()    __HAL_RCC_GPIOA_CLK_DISABLE()
-// #define COM1_TX_AF                    GPIO_AF7_USART1
-
-// #define COM1_RX_PIN                   GPIO_PIN_10
-// #define COM1_RX_GPIO_PORT             GPIOA
-// #define COM1_RX_GPIO_CLK_ENABLE()     __HAL_RCC_GPIOA_CLK_ENABLE()
-// #define COM1_RX_GPIO_CLK_DISABLE()    __HAL_RCC_GPIOA_CLK_DISABLE()
-// #define COM1_RX_AF                    GPIO_AF7_USART1
-// #define COM_POLL_TIMEOUT             1000
-// #endif /* USE_BSP_COM_FEATURE */
-
-/**
-  * @}
-  */
-
-/**
-  * @}
-  */
-
-/** @addtogroup STM32U5XX_NUCLEO_LOW_LEVEL_Exported_Variables
-  * @{
-  */
-// extern EXTI_HandleTypeDef hpb_exti[];
-// #if (USE_BSP_COM_FEATURE > 0) //koncz_change
-// extern UART_HandleTypeDef hcom_uart[];
-// extern USART_TypeDef *COM_USART[];
-// #endif /* USE_BSP_COM_FEATURE */
-
-/**
-  * @}
-  */
-
-/** @defgroup STM32U5XX_NUCLEO_LOW_LEVEL_Exported_FunctionsPrototypes LOW LEVEL Exported Functions Prototypes
-  * @{
-  */
 //int32_t  BSP_GetVersion(void);
 const uint8_t *BSP_GetBoardName(void);
 //const uint8_t *BSP_GetBoardID(void);
@@ -305,21 +116,6 @@ int32_t BSP_ADC1_Select_CH15(void);
 int32_t BSP_ADC1_Select_CH16(void);
 int32_t BSP_ADC1_Select_CH17(void);
 
-/**
-  * @}
-  */
-
-/**
-  * @}
-  */
-
-/**
-  * @}
-  */
-
-/**
-  * @}
-  */
 
 #ifdef __cplusplus
 }
