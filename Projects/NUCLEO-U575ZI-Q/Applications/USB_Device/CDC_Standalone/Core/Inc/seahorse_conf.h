@@ -34,8 +34,8 @@ extern "C" {
 #define USE_BSP_COM_FEATURE 0U //koncz_change
 #define USE_COM_LOG         0U
 
-/* Button user interrupt priority */
-#define BSP_BUTTON_USER_IT_PRIORITY 0x07UL  /* Default is lowest priority level */
+/* Button user interrupt priority */ //koncz_change
+//#define BSP_BUTTON_USER_IT_PRIORITY 0x07UL  /* Default is lowest priority level */
 
 #ifdef __cplusplus
 }

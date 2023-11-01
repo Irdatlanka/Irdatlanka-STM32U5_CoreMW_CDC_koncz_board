@@ -29,8 +29,7 @@ extern "C" {
 #include "usbd_cdc.h" 
 #include "usbd_cdc_if.h"
 
-//Koncz
-
+//koncz_change:
 //#include "stm32u5xx_hal.h"
 #include "stm32u5xx_ll_ucpd.h"
 

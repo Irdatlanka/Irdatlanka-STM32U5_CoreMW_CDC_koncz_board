@@ -20,12 +20,19 @@
   *
   ******************************************************************************
   */
+#if 0
 
 /* Includes ------------------------------------------------------------------*/
 #include "seahorse_usbpd_pwr.h"
 #include "stm32u5xx_ll_adc.h"
 #include "stm32u5xx_ll_bus.h"
 #include "stm32u5xx_ll_gpio.h"
+
+//koncz_change:
+#include "stm32u5xx_hal.h"
+
+//extern ADC_HandleTypeDef hadc1;
+extern ADC_HandleTypeDef hadc4; //for USB VBUS
 
 /** @addtogroup BSP
   * @{
@@ -74,7 +81,7 @@
 /** @defgroup STM32U5XX_NUCLEO_USBPD_PWR_Private_Functions Private Functions
   * @{
   */
-static void     MX_ADC1_Init(void);
+//static void     MX_ADC1_Init(void);  //koncz_change: nem kell, main-ben inicializálom ADC-ket
 
 /**
   * @}
@@ -103,12 +110,14 @@ int32_t BSP_USBPD_PWR_Init(uint32_t PortNum)
   else
   {
     /* Disable DB management on TCPP01 */
-    GPIO_TCPP01_DB_CLK_ENABLE();
-    LL_GPIO_SetPinMode(GPIO_TCPP01_DB_PORT, GPIO_TCPP01_DB_PIN, LL_GPIO_MODE_OUTPUT);
-    LL_GPIO_SetPinSpeed(GPIO_TCPP01_DB_PORT, GPIO_TCPP01_DB_PIN, LL_GPIO_SPEED_FREQ_HIGH);
-    LL_GPIO_SetPinOutputType(GPIO_TCPP01_DB_PORT, GPIO_TCPP01_DB_PIN, LL_GPIO_OUTPUT_PUSHPULL);
-    LL_GPIO_SetPinPull(GPIO_TCPP01_DB_PORT, GPIO_TCPP01_DB_PIN, LL_GPIO_PULL_UP);
-    LL_GPIO_SetOutputPin(GPIO_TCPP01_DB_PORT, GPIO_TCPP01_DB_PIN);
+    // GPIO_TCPP01_DB_CLK_ENABLE();
+    // LL_GPIO_SetPinMode(GPIO_TCPP01_DB_PORT, GPIO_TCPP01_DB_PIN, LL_GPIO_MODE_OUTPUT);
+    // LL_GPIO_SetPinSpeed(GPIO_TCPP01_DB_PORT, GPIO_TCPP01_DB_PIN, LL_GPIO_SPEED_FREQ_HIGH);
+    // LL_GPIO_SetPinOutputType(GPIO_TCPP01_DB_PORT, GPIO_TCPP01_DB_PIN, LL_GPIO_OUTPUT_PUSHPULL);
+    // LL_GPIO_SetPinPull(GPIO_TCPP01_DB_PORT, GPIO_TCPP01_DB_PIN, LL_GPIO_PULL_UP);
+    // LL_GPIO_SetOutputPin(GPIO_TCPP01_DB_PORT, GPIO_TCPP01_DB_PIN);
+	//koncz_change: igy egyszerubb
+	HAL_GPIO_WritePin(GPIO_TCPP01_DB_PORT, GPIO_TCPP01_DB_PIN, GPIO_PIN_SET);
   }
   return ret;
 }
@@ -156,9 +165,9 @@ int32_t BSP_USBPD_PWR_VBUSInit(uint32_t PortNum)
   else
   {
     /* Initialize VBUS sensing ADC */
-    MX_ADC1_Init();
+    //MX_ADC1_Init(); //koncz_change: main-ben inicializált ADC-t használunk
 
-    LL_ADC_REG_StartConversion(VSENSE_ADC_INSTANCE);
+    LL_ADC_REG_StartConversion(VSENSE_ADC_INSTANCE); // TODO: ez kell??
   }
   return ret;
 }
@@ -186,15 +195,15 @@ int32_t BSP_USBPD_PWR_VBUSDeInit(uint32_t PortNum)
     {
       LL_ADC_REG_StopConversion(VSENSE_ADC_INSTANCE);
     }
+	//koncz_change:
+    // /* Disable ADC */
+    // if (LL_ADC_IsEnabled(VSENSE_ADC_INSTANCE) == 1UL)
+    // {
+      // LL_ADC_Disable(VSENSE_ADC_INSTANCE);
+    // }
 
-    /* Disable ADC */
-    if (LL_ADC_IsEnabled(VSENSE_ADC_INSTANCE) == 1UL)
-    {
-      LL_ADC_Disable(VSENSE_ADC_INSTANCE);
-    }
-
-    /* Reset ADC configuration */
-    VSENSE_ADC_DISABLE_CLOCK();
+    // /* Reset ADC configuration */
+    // VSENSE_ADC_DISABLE_CLOCK();
   }
   return ret;
 }
@@ -206,21 +215,22 @@ int32_t BSP_USBPD_PWR_VBUSDeInit(uint32_t PortNum)
   *         @arg @ref USBPD_PWR_TYPE_C_PORT_1
   * @retval BSP status
   */
-int32_t BSP_USBPD_PWR_VBUSOn(uint32_t PortNum)
-{
-  int32_t ret;
+  //koncz_change: not supported, ki is hagyom
+// int32_t BSP_USBPD_PWR_VBUSOn(uint32_t PortNum)
+// {
+  // int32_t ret;
 
-  /* Check if instance is valid */
-  if (PortNum >= USBPD_PWR_INSTANCES_NBR)
-  {
-    ret = BSP_ERROR_WRONG_PARAM;
-  }
-  else
-  {
-    ret = BSP_ERROR_FEATURE_NOT_SUPPORTED;
-  }
-  return ret;
-}
+  // /* Check if instance is valid */
+  // if (PortNum >= USBPD_PWR_INSTANCES_NBR)
+  // {
+    // ret = BSP_ERROR_WRONG_PARAM;
+  // }
+  // else
+  // {
+    // ret = BSP_ERROR_FEATURE_NOT_SUPPORTED;
+  // }
+  // return ret;
+// }
 
 /**
   * @brief  Disable power supply over VBUS.
@@ -229,21 +239,22 @@ int32_t BSP_USBPD_PWR_VBUSOn(uint32_t PortNum)
   *         @arg @ref USBPD_PWR_TYPE_C_PORT_1
   * @retval BSP status
   */
-int32_t BSP_USBPD_PWR_VBUSOff(uint32_t PortNum)
-{
-  int32_t ret;
+  //koncz_change: not supported, ki is hagyom
+// int32_t BSP_USBPD_PWR_VBUSOff(uint32_t PortNum)
+// {
+  // int32_t ret;
 
-  /* Check if instance is valid */
-  if (PortNum >= USBPD_PWR_INSTANCES_NBR)
-  {
-    ret = BSP_ERROR_WRONG_PARAM;
-  }
-  else
-  {
-    ret = BSP_ERROR_FEATURE_NOT_SUPPORTED;
-  }
-  return ret;
-}
+  // /* Check if instance is valid */
+  // if (PortNum >= USBPD_PWR_INSTANCES_NBR)
+  // {
+    // ret = BSP_ERROR_WRONG_PARAM;
+  // }
+  // else
+  // {
+    // ret = BSP_ERROR_FEATURE_NOT_SUPPORTED;
+  // }
+  // return ret;
+// }
 
 /**
   * @brief  Get actual VBUS status.
@@ -253,22 +264,23 @@ int32_t BSP_USBPD_PWR_VBUSOff(uint32_t PortNum)
   * @param  pState VBUS status (1: On, 0: Off)
   * @retval BSP status
   */
-int32_t BSP_USBPD_PWR_VBUSIsOn(uint32_t PortNum, uint8_t *pState)
-{
-  int32_t ret;
+  //koncz_change: not supported, ki is hagyom
+// int32_t BSP_USBPD_PWR_VBUSIsOn(uint32_t PortNum, uint8_t *pState)
+// {
+  // int32_t ret;
 
-  /* Check if instance is valid */
-  if (PortNum >= USBPD_PWR_INSTANCES_NBR)
-  {
-    ret = BSP_ERROR_WRONG_PARAM;
-  }
-  else
-  {
-    *pState = 0u;
-    ret = BSP_ERROR_FEATURE_NOT_SUPPORTED;
-  }
-  return ret;
-}
+  // /* Check if instance is valid */
+  // if (PortNum >= USBPD_PWR_INSTANCES_NBR)
+  // {
+    // ret = BSP_ERROR_WRONG_PARAM;
+  // }
+  // else
+  // {
+    // *pState = 0u;
+    // ret = BSP_ERROR_FEATURE_NOT_SUPPORTED;
+  // }
+  // return ret;
+// }
 
 /**
   * @brief  Set a fixed/variable PDO and manage the power control.
@@ -280,23 +292,24 @@ int32_t BSP_USBPD_PWR_VBUSIsOn(uint32_t PortNum, uint8_t *pState)
   * @param  MaxOperatingCurrent the Max Operating Current (in mA)
   * @retval BSP status
   */
-int32_t BSP_USBPD_PWR_VBUSSetVoltage_Fixed(uint32_t PortNum,
-                                           uint32_t VbusTargetInmv,
-                                           uint32_t OperatingCurrent,
-                                           uint32_t MaxOperatingCurrent)
-{
-  int32_t ret = BSP_ERROR_NONE;
-  UNUSED(MaxOperatingCurrent);
-  UNUSED(OperatingCurrent);
-  UNUSED(VbusTargetInmv);
+  //koncz_change: not supported, ki is hagyom
+// int32_t BSP_USBPD_PWR_VBUSSetVoltage_Fixed(uint32_t PortNum,
+                                           // uint32_t VbusTargetInmv,
+                                           // uint32_t OperatingCurrent,
+                                           // uint32_t MaxOperatingCurrent)
+// {
+  // int32_t ret = BSP_ERROR_NONE;
+  // UNUSED(MaxOperatingCurrent);
+  // UNUSED(OperatingCurrent);
+  // UNUSED(VbusTargetInmv);
 
-  /* Check if instance is valid */
-  if (PortNum >= USBPD_PWR_INSTANCES_NBR)
-  {
-    ret = BSP_ERROR_WRONG_PARAM;
-  }
-  return ret;
-}
+  // /* Check if instance is valid */
+  // if (PortNum >= USBPD_PWR_INSTANCES_NBR)
+  // {
+    // ret = BSP_ERROR_WRONG_PARAM;
+  // }
+  // return ret;
+// }
 
 /**
   * @brief  Set a fixed/variable PDO and manage the power control.
@@ -309,29 +322,30 @@ int32_t BSP_USBPD_PWR_VBUSSetVoltage_Fixed(uint32_t PortNum,
   * @param  MaxOperatingCurrent the Max Operating Current (in mA)
   * @retval BSP status
   */
-int32_t BSP_USBPD_PWR_VBUSSetVoltage_Variable(uint32_t PortNum,
-                                              uint32_t VbusTargetMinInmv,
-                                              uint32_t VbusTargetMaxInmv,
-                                              uint32_t OperatingCurrent,
-                                              uint32_t MaxOperatingCurrent)
-{
-  int32_t ret;
-  UNUSED(MaxOperatingCurrent);
-  UNUSED(OperatingCurrent);
-  UNUSED(VbusTargetMaxInmv);
-  UNUSED(VbusTargetMinInmv);
+  //koncz_change: not supported, ki is hagyom
+// int32_t BSP_USBPD_PWR_VBUSSetVoltage_Variable(uint32_t PortNum,
+                                              // uint32_t VbusTargetMinInmv,
+                                              // uint32_t VbusTargetMaxInmv,
+                                              // uint32_t OperatingCurrent,
+                                              // uint32_t MaxOperatingCurrent)
+// {
+  // int32_t ret;
+  // UNUSED(MaxOperatingCurrent);
+  // UNUSED(OperatingCurrent);
+  // UNUSED(VbusTargetMaxInmv);
+  // UNUSED(VbusTargetMinInmv);
 
-  /* Check if instance is valid */
-  if (PortNum >= USBPD_PWR_INSTANCES_NBR)
-  {
-    ret = BSP_ERROR_WRONG_PARAM;
-  }
-  else
-  {
-    ret = BSP_ERROR_FEATURE_NOT_SUPPORTED;
-  }
-  return ret;
-}
+  // /* Check if instance is valid */
+  // if (PortNum >= USBPD_PWR_INSTANCES_NBR)
+  // {
+    // ret = BSP_ERROR_WRONG_PARAM;
+  // }
+  // else
+  // {
+    // ret = BSP_ERROR_FEATURE_NOT_SUPPORTED;
+  // }
+  // return ret;
+// }
 
 /**
   * @brief  Set a Battery PDO and manage the power control.
@@ -344,33 +358,34 @@ int32_t BSP_USBPD_PWR_VBUSSetVoltage_Variable(uint32_t PortNum,
   * @param  MaxOperatingPower the Max Operating Power (in mW)
   * @retval BSP status
   */
-int32_t BSP_USBPD_PWR_VBUSSetVoltage_Battery(uint32_t PortNum,
-                                             uint32_t VbusTargetMin,
-                                             uint32_t VbusTargetMax,
-                                             uint32_t OperatingPower,
-                                             uint32_t MaxOperatingPower)
-{
-  int32_t ret;
-  UNUSED(OperatingPower);
-  UNUSED(VbusTargetMax);
-  UNUSED(VbusTargetMin);
-  UNUSED(MaxOperatingPower);
+  //koncz_change: not supported, ki is hagyom
+// int32_t BSP_USBPD_PWR_VBUSSetVoltage_Battery(uint32_t PortNum,
+                                             // uint32_t VbusTargetMin,
+                                             // uint32_t VbusTargetMax,
+                                             // uint32_t OperatingPower,
+                                             // uint32_t MaxOperatingPower)
+// {
+  // int32_t ret;
+  // UNUSED(OperatingPower);
+  // UNUSED(VbusTargetMax);
+  // UNUSED(VbusTargetMin);
+  // UNUSED(MaxOperatingPower);
 
-  /* Check if instance is valid */
-  if (PortNum >= USBPD_PWR_INSTANCES_NBR)
-  {
-    ret = BSP_ERROR_WRONG_PARAM;
-  }
-  else
-  {
-    /* Set the power, the precision must be at 5% */
-    /* Set the current limitation */
-    /* not implemented */
+  // /* Check if instance is valid */
+  // if (PortNum >= USBPD_PWR_INSTANCES_NBR)
+  // {
+    // ret = BSP_ERROR_WRONG_PARAM;
+  // }
+  // else
+  // {
+    // /* Set the power, the precision must be at 5% */
+    // /* Set the current limitation */
+    // /* not implemented */
 
-    ret = BSP_ERROR_FEATURE_NOT_SUPPORTED;
-  }
-  return ret;
-}
+    // ret = BSP_ERROR_FEATURE_NOT_SUPPORTED;
+  // }
+  // return ret;
+// }
 
 /**
   * @brief  Set a APDO and manage the power control.
@@ -382,27 +397,28 @@ int32_t BSP_USBPD_PWR_VBUSSetVoltage_Battery(uint32_t PortNum,
   * @param  Delta Delta between with previous APDO (in mV), 0 means APDO start
   * @retval BSP status
   */
-int32_t BSP_USBPD_PWR_VBUSSetVoltage_APDO(uint32_t PortNum,
-                                          uint32_t VbusTargetInmv,
-                                          uint32_t OperatingCurrent,
-                                          int32_t Delta)
-{
-  int32_t ret;
-  UNUSED(Delta);
-  UNUSED(OperatingCurrent);
-  UNUSED(VbusTargetInmv);
+  //koncz_change: not supported, ki is hagyom
+// int32_t BSP_USBPD_PWR_VBUSSetVoltage_APDO(uint32_t PortNum,
+                                          // uint32_t VbusTargetInmv,
+                                          // uint32_t OperatingCurrent,
+                                          // int32_t Delta)
+// {
+  // int32_t ret;
+  // UNUSED(Delta);
+  // UNUSED(OperatingCurrent);
+  // UNUSED(VbusTargetInmv);
 
-  /* Check if instance is valid */
-  if (PortNum >= USBPD_PWR_INSTANCES_NBR)
-  {
-    ret = BSP_ERROR_WRONG_PARAM;
-  }
-  else
-  {
-    ret = BSP_ERROR_FEATURE_NOT_SUPPORTED;
-  }
-  return ret;
-}
+  // /* Check if instance is valid */
+  // if (PortNum >= USBPD_PWR_INSTANCES_NBR)
+  // {
+    // ret = BSP_ERROR_WRONG_PARAM;
+  // }
+  // else
+  // {
+    // ret = BSP_ERROR_FEATURE_NOT_SUPPORTED;
+  // }
+  // return ret;
+// }
 
 /**
   * @brief  Set the VBUS disconnection voltage threshold.
@@ -415,23 +431,24 @@ int32_t BSP_USBPD_PWR_VBUSSetVoltage_APDO(uint32_t PortNum,
   * @param  VoltageThreshold VBUS disconnection voltage threshold (in mV)
   * @retval BSP status
   */
-int32_t BSP_USBPD_PWR_SetVBUSDisconnectionThreshold(uint32_t PortNum,
-                                                    uint32_t VoltageThreshold)
-{
-  UNUSED(VoltageThreshold);
-  int32_t ret;
+  //koncz_change: not supported, ki is hagyom
+// int32_t BSP_USBPD_PWR_SetVBUSDisconnectionThreshold(uint32_t PortNum,
+                                                    // uint32_t VoltageThreshold)
+// {
+  // UNUSED(VoltageThreshold);
+  // int32_t ret;
 
-  /* Check if instance is valid */
-  if (PortNum >= USBPD_PWR_INSTANCES_NBR)
-  {
-    ret = BSP_ERROR_WRONG_PARAM;
-  }
-  else
-  {
-    ret = BSP_ERROR_FEATURE_NOT_SUPPORTED;
-  }
-  return ret;
-}
+  // /* Check if instance is valid */
+  // if (PortNum >= USBPD_PWR_INSTANCES_NBR)
+  // {
+    // ret = BSP_ERROR_WRONG_PARAM;
+  // }
+  // else
+  // {
+    // ret = BSP_ERROR_FEATURE_NOT_SUPPORTED;
+  // }
+  // return ret;
+// }
 
 /**
   * @brief  Register USB Type-C Current callback function.
@@ -482,13 +499,19 @@ int32_t BSP_USBPD_PWR_VBUSGetVoltage(uint32_t PortNum, uint32_t *pVoltage)
   }
   else
   {
-    uint32_t val;
-
-    LL_ADC_REG_StartConversion(ADC1);
-
-    val = __LL_ADC_CALC_DATA_TO_VOLTAGE(VSENSE_ADC_INSTANCE, VDDA_APPLI,
-                                        (uint32_t) LL_ADC_REG_ReadConversionData12(VSENSE_ADC_INSTANCE),
-                                        LL_ADC_RESOLUTION_12B);
+    //uint32_t val;
+    // LL_ADC_REG_StartConversion(ADC1);
+    // val = __LL_ADC_CALC_DATA_TO_VOLTAGE(VSENSE_ADC_INSTANCE, VDDA_APPLI,
+                                        // (uint32_t) LL_ADC_REG_ReadConversionData12(VSENSE_ADC_INSTANCE),
+                                        // LL_ADC_RESOLUTION_12B);
+	//koncz_change:
+	// -----------------------------------------------ITT--------------------------------------------
+	//----------------------------------------------------------------------------------------------------
+	uint16_t raw;
+	HAL_ADC_Start(&hadc4);
+	HAL_ADC_PollForConversion(&hadc4, HAL_MAX_DELAY);
+	raw = HAL_ADC_GetValue(&hadc4);
+	HAL_ADC_Stop(&hadc4);
     /* NUCLEO144_Q (MB1549) board is used */
     /* Value is multiplied by 7.61 (Divider R35+R34/R34 (379.9K/49.9K) for VSENSE) */
     val *= 761UL;
@@ -769,75 +792,71 @@ int32_t BSP_USBPD_PWR_VCONNDischargeOff(uint32_t PortNum)
 /** @addtogroup STM32U5XX_NUCLEO_USBPD_PWR_Private_Functions
   * @{
   */
+//koncz_change: nem kell, main-ben inicializálom az ADC-ket
+// static void MX_ADC1_Init(void)
+// {
+  // static ADC_HandleTypeDef hadc1;
 
-static void MX_ADC1_Init(void)
-{
-  static ADC_HandleTypeDef hadc1;
+  // /* Enable GPIO Clock */
+  // VSENSE_GPIO_ENABLE_CLOCK();
 
-  /* Enable GPIO Clock */
-  VSENSE_GPIO_ENABLE_CLOCK();
+  // /* Configure GPIO in analog mode to be used as ADC input */
+  // LL_GPIO_SetPinMode(VSENSE_GPIO_PORT, VSENSE_GPIO_PIN, LL_GPIO_MODE_ANALOG);
+  // LL_GPIO_SetPinPull(VSENSE_GPIO_PORT, VSENSE_GPIO_PIN, LL_GPIO_PULL_NO);
 
-  /* Configure GPIO in analog mode to be used as ADC input */
-  LL_GPIO_SetPinMode(VSENSE_GPIO_PORT, VSENSE_GPIO_PIN, LL_GPIO_MODE_ANALOG);
-  LL_GPIO_SetPinPull(VSENSE_GPIO_PORT, VSENSE_GPIO_PIN, LL_GPIO_PULL_NO);
+  // /* Enable ADC clock (core clock) */
+  // VSENSE_ADC_ENABLE_CLOCK();
 
-  /* Enable ADC clock (core clock) */
-  VSENSE_ADC_ENABLE_CLOCK();
+  // /* Configure the global features of the ADC (Clock, Resolution, Data Alignment and number of conversion) */
 
-  /* Configure the global features of the ADC (Clock, Resolution, Data Alignment and number of conversion) */
+  // /* The clock source of the ADC is by default HCLCK (see RCC->CCIPR3 ADCDACSEL)*/
+  // __HAL_RCC_PWR_CLK_ENABLE();
+  // HAL_PWREx_EnableVddA();
+  // HAL_PWREx_EnableVddIO2();
 
-  /* The clock source of the ADC is by default HCLCK (see RCC->CCIPR3 ADCDACSEL)*/
-  __HAL_RCC_PWR_CLK_ENABLE();
-  HAL_PWREx_EnableVddA();
-  HAL_PWREx_EnableVddIO2();
+  // hadc1.Instance = VSENSE_ADC_INSTANCE;
+  // hadc1.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV4;
+  // hadc1.Init.Resolution = ADC_RESOLUTION_12B;
+  // hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
+  // hadc1.Init.ScanConvMode = ADC_SCAN_ENABLE;
+  // hadc1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
+  // hadc1.Init.LowPowerAutoWait = DISABLE;
+  // hadc1.Init.LowPowerAutoPowerOff = ADC_LOW_POWER_NONE;
+  // hadc1.Init.ContinuousConvMode = ENABLE;
+  // hadc1.Init.NbrOfConversion = 1;
+  // hadc1.Init.DiscontinuousConvMode = DISABLE;
+  // hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
+  // hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
+  // hadc1.Init.DMAContinuousRequests = DISABLE;
+  // hadc1.Init.Overrun = ADC_OVR_DATA_OVERWRITTEN;
+  // hadc1.Init.OversamplingMode = DISABLE;
+  // if (HAL_ADC_Init(&hadc1) != HAL_OK)
+  // {
+  // }
 
-  hadc1.Instance = VSENSE_ADC_INSTANCE;
-  hadc1.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV4;
-  hadc1.Init.Resolution = ADC_RESOLUTION_12B;
-  hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
-  hadc1.Init.ScanConvMode = ADC_SCAN_ENABLE;
-  hadc1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
-  hadc1.Init.LowPowerAutoWait = DISABLE;
-  hadc1.Init.LowPowerAutoPowerOff = ADC_LOW_POWER_NONE;
-  hadc1.Init.ContinuousConvMode = ENABLE;
-  hadc1.Init.NbrOfConversion = 1;
-  hadc1.Init.DiscontinuousConvMode = DISABLE;
-  hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
-  hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
-  hadc1.Init.DMAContinuousRequests = DISABLE;
-  hadc1.Init.Overrun = ADC_OVR_DATA_OVERWRITTEN;
-  hadc1.Init.OversamplingMode = DISABLE;
-  if (HAL_ADC_Init(&hadc1) != HAL_OK)
-  {
-  }
+  // /* Configure Regular Channel */
+  // ADC_ChannelConfTypeDef sConfig = {0};
 
-  /* Configure Regular Channel */
-  ADC_ChannelConfTypeDef sConfig = {0};
+  // sConfig.Channel = VSENSE_ADC_CHANNEL;
+  // sConfig.Rank = VSENSE_ADC_RANK;
+  // sConfig.SamplingTime = ADC_SAMPLETIME_36CYCLES;
+  // sConfig.SingleDiff   = ADC_SINGLE_ENDED;            /* Single-ended input channel */
+  // sConfig.OffsetNumber = ADC_OFFSET_NONE;             /* No offset subtraction */
+  // sConfig.Offset = 0;                                 /* Parameter discarded because offset correction is disabled */
 
-  sConfig.Channel = VSENSE_ADC_CHANNEL;
-  sConfig.Rank = VSENSE_ADC_RANK;
-  sConfig.SamplingTime = ADC_SAMPLETIME_36CYCLES;
-  sConfig.SingleDiff   = ADC_SINGLE_ENDED;            /* Single-ended input channel */
-  sConfig.OffsetNumber = ADC_OFFSET_NONE;             /* No offset subtraction */
-  sConfig.Offset = 0;                                 /* Parameter discarded because offset correction is disabled */
+  // if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  // {
+  // }
 
-  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
-  {
-  }
+  // if (HAL_ADCEx_Calibration_Start(&hadc1, ADC_CALIB_OFFSET, ADC_SINGLE_ENDED) != HAL_OK)
+  // {
+  // }
 
-  if (HAL_ADCEx_Calibration_Start(&hadc1, ADC_CALIB_OFFSET, ADC_SINGLE_ENDED) != HAL_OK)
-  {
-  }
+  // if (HAL_ADC_Start(&hadc1) != HAL_OK)
+  // {
+  // }
 
-  if (HAL_ADC_Start(&hadc1) != HAL_OK)
-  {
-  }
-
-}
-
-/**
-  * @}
-  */
+// }
 
 /**
   * @}
@@ -855,3 +874,12 @@ static void MX_ADC1_Init(void)
   * @}
   */
 
+/**
+  * @}
+  */
+
+
+
+
+
+#endif

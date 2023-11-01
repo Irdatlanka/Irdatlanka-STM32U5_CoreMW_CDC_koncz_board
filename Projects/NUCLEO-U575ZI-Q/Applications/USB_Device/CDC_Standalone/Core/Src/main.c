@@ -35,8 +35,10 @@
 
 
 /* Private variables ---------------------------------------------------------*/
-ADC_HandleTypeDef hadc1;
-ADC_HandleTypeDef hadc4;
+extern ADC_HandleTypeDef hadc1;
+//ADC_HandleTypeDef hadc4; //koncz_note: nem kell már
+int fafasz = 20;
+
 
 SPI_HandleTypeDef hspi1;
 
@@ -52,13 +54,13 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void CACHE_Enable(void);
 
-static void MX_ADC4_Init(void);
+//static void MX_ADC4_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_UART4_Init(void);
 //static void MX_UCPD1_Init(void); //koncz_note: nincs a példaprojektben
 //static void MX_USB_OTG_FS_PCD_Init(void); //koncz_note: nincs a példaprojektben
 static void MX_UART5_Init(void);
-static void MX_ADC1_Init(void);
+//static void MX_ADC1_Init(void);
 static void MX_ICACHE_Init(void);
 static void MX_USART1_UART_Init(void);
 
@@ -71,7 +73,7 @@ static void MX_USART1_UART_Init(void);
   */
 int main(void)
 {
-
+  uint32_t adc_raw[3];
   
   /* MCU Configuration--------------------------------------------------------*/
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
@@ -95,6 +97,10 @@ int main(void)
   //koncz_note: disable dead battery on TCPP01:
   HAL_GPIO_WritePin(usbdb__GPIO_Port, usbdb__Pin, GPIO_PIN_SET);
   
+  //koncz_note: BSP-s ADC1 init
+  if (BSP_Init_ADC1() != BSP_ERROR_NONE)
+    Error_Handler();
+  
   //MX_ADC4_Init(); //koncz_note: egyelore ezek kimaradnak
   MX_SPI1_Init();
   //MX_UART4_Init();
@@ -107,46 +113,48 @@ int main(void)
   
   /* Initialize all configured peripherals */
     /* Global Init of USBPD HW */
-  USBPD_HW_IF_GlobalHwInit();
+ // USBPD_HW_IF_GlobalHwInit();
 
-  MX_USB_Device_Init();
+ // MX_USB_Device_Init();
 
-  MX_USBPD_Init();
+ // MX_USBPD_Init();
   /* Configure the application hardware resources */
 
   /* Infinite loop */
   while (1)
   {
 
-#if 0
-    HAL_GPIO_WritePin(led_iolink1_g_GPIO_Port, led_iolink1_g_Pin, GPIO_PIN_SET);
-    HAL_Delay(1000);
-    HAL_GPIO_WritePin(led_iolink1_g_GPIO_Port, led_iolink1_g_Pin, GPIO_PIN_RESET);
-    
-    HAL_GPIO_WritePin(led_iolink1_r_GPIO_Port, led_iolink1_r_Pin, GPIO_PIN_SET);
-    HAL_Delay(1000);
-    HAL_GPIO_WritePin(led_iolink1_r_GPIO_Port, led_iolink1_r_Pin, GPIO_PIN_RESET);
-    
-    HAL_GPIO_WritePin(led_pwr_ok_GPIO_Port, led_pwr_ok_Pin, GPIO_PIN_SET);
-    HAL_Delay(1000);
-    HAL_GPIO_WritePin(led_pwr_ok_GPIO_Port, led_pwr_ok_Pin, GPIO_PIN_RESET);
-    
-    HAL_GPIO_WritePin(led_pwr_fault_GPIO_Port, led_pwr_fault_Pin, GPIO_PIN_SET);
-    HAL_Delay(1000);
-    HAL_GPIO_WritePin(led_pwr_fault_GPIO_Port, led_pwr_fault_Pin, GPIO_PIN_RESET);
-    
-    HAL_GPIO_WritePin(led_usb_GPIO_Port, led_usb_Pin, GPIO_PIN_SET);
-    HAL_Delay(1000);
-    HAL_GPIO_WritePin(led_usb_GPIO_Port, led_usb_Pin, GPIO_PIN_RESET);
-#endif
-    
     if (BSP_LedTest() != BSP_ERROR_NONE)
     {
       Error_Handler();
     }
     
+    
+    	  BSP_ADC1_Select_CH15();
+	  	HAL_ADC_Start(&hadc1);
+		HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
+		adc_raw[0] = HAL_ADC_GetValue(&hadc1);
+		HAL_ADC_Stop(&hadc1);
+	  HAL_Delay(1);
+	  BSP_ADC1_Select_CH16();
+	  	HAL_ADC_Start(&hadc1);
+		HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
+		adc_raw[1] = HAL_ADC_GetValue(&hadc1);
+		HAL_ADC_Stop(&hadc1);
+	  HAL_Delay(1);
+	  BSP_ADC1_Select_CH17();
+	  	HAL_ADC_Start(&hadc1);
+		HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
+		adc_raw[2] = HAL_ADC_GetValue(&hadc1);
+		HAL_ADC_Stop(&hadc1);
+
+	  //printf("ADC raw: %d %d %d\r\n\r\n", (int)adc_raw[0], (int)adc_raw[1], (int)adc_raw[2]);
+	  HAL_Delay(100);
+    
+    
+    
 /* Run the detection state machine */
-    USBPD_DPM_Run();
+    //USBPD_DPM_Run();
   }
 }
 
@@ -239,127 +247,7 @@ static void CACHE_Enable(void)
 
 
 
-/**
-  * @brief ADC1 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_ADC1_Init(void)
-{
 
-  /* USER CODE BEGIN ADC1_Init 0 */
-
-  /* USER CODE END ADC1_Init 0 */
-
-  /* USER CODE BEGIN ADC1_Init 1 */
-
-  /* USER CODE END ADC1_Init 1 */
-
-  /** Common config
-  */
-  hadc1.Instance = ADC1;
-  hadc1.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV1;
-  hadc1.Init.Resolution = ADC_RESOLUTION_14B;
-  hadc1.Init.GainCompensation = 0;
-  hadc1.Init.ScanConvMode = ADC_SCAN_DISABLE;
-  hadc1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
-  hadc1.Init.LowPowerAutoWait = DISABLE;
-  hadc1.Init.ContinuousConvMode = DISABLE;
-  hadc1.Init.NbrOfConversion = 1;
-  hadc1.Init.DiscontinuousConvMode = DISABLE;
-  hadc1.Init.DMAContinuousRequests = DISABLE;
-  hadc1.Init.TriggerFrequencyMode = ADC_TRIGGER_FREQ_HIGH;
-  hadc1.Init.Overrun = ADC_OVR_DATA_PRESERVED;
-  hadc1.Init.LeftBitShift = ADC_LEFTBITSHIFT_NONE;
-  hadc1.Init.ConversionDataManagement = ADC_CONVERSIONDATA_DR;
-  hadc1.Init.OversamplingMode = DISABLE;
-  if (HAL_ADC_Init(&hadc1) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN ADC1_Init 2 */
-
-  /* USER CODE END ADC1_Init 2 */
-
-}
-
-/**
-  * @brief ADC4 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_ADC4_Init(void)
-{
-
-  /* USER CODE BEGIN ADC4_Init 0 */
-
-  /* USER CODE END ADC4_Init 0 */
-
-  ADC_ChannelConfTypeDef sConfig = {0};
-
-  /* USER CODE BEGIN ADC4_Init 1 */
-
-  /* USER CODE END ADC4_Init 1 */
-
-  /** Common config
-  */
-  hadc4.Instance = ADC4;
-  hadc4.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV1;
-  hadc4.Init.Resolution = ADC_RESOLUTION_12B;
-  hadc4.Init.DataAlign = ADC_DATAALIGN_RIGHT;
-  hadc4.Init.ScanConvMode = ADC_SCAN_DIRECTION_FORWARD;
-  hadc4.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
-  hadc4.Init.LowPowerAutoPowerOff = ADC_LOW_POWER_NONE;
-  hadc4.Init.LowPowerAutoWait = DISABLE;
-  hadc4.Init.ContinuousConvMode = DISABLE;
-  hadc4.Init.NbrOfConversion = 1;
-  hadc4.Init.DiscontinuousConvMode = DISABLE;
-  hadc4.Init.ExternalTrigConv = ADC_SOFTWARE_START;
-  hadc4.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
-  hadc4.Init.DMAContinuousRequests = DISABLE;
-  hadc4.Init.TriggerFrequencyMode = ADC_TRIGGER_FREQ_LOW;
-  hadc4.Init.VrefProtection = ADC_VREF_PPROT_NONE;
-  hadc4.Init.Overrun = ADC_OVR_DATA_PRESERVED;
-  hadc4.Init.SamplingTimeCommon1 = ADC4_SAMPLETIME_1CYCLE_5;
-  hadc4.Init.SamplingTimeCommon2 = ADC4_SAMPLETIME_1CYCLE_5;
-  hadc4.Init.OversamplingMode = DISABLE;
-  if (HAL_ADC_Init(&hadc4) != HAL_OK)
-  {
-    Error_Handler();
-  }
-
-  /** Configure Regular Channel
-  */
-  sConfig.Channel = ADC_CHANNEL_18;
-  sConfig.Rank = ADC4_RANK_CHANNEL_NUMBER;
-  sConfig.SamplingTime = ADC4_SAMPLINGTIME_COMMON_1;
-  sConfig.OffsetNumber = ADC_OFFSET_NONE;
-  sConfig.Offset = 0;
-  if (HAL_ADC_ConfigChannel(&hadc4, &sConfig) != HAL_OK)
-  {
-    Error_Handler();
-  }
-
-  /** Configure Regular Channel
-  */
-  sConfig.Channel = ADC4_CHANNEL_TEMPSENSOR;
-  if (HAL_ADC_ConfigChannel(&hadc4, &sConfig) != HAL_OK)
-  {
-    Error_Handler();
-  }
-
-  /** Configure Regular Channel
-  */
-  sConfig.Channel = ADC_CHANNEL_VREFINT;
-  if (HAL_ADC_ConfigChannel(&hadc4, &sConfig) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN ADC4_Init 2 */
-
-  /* USER CODE END ADC4_Init 2 */
-
-}
 
 /**
   * @brief ICACHE Initialization Function

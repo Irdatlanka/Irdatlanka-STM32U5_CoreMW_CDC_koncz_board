@@ -1,6 +1,5 @@
-C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\STM32U575_CDC_Standalone\BrowseInfo\Core_13247989168731456611.dir\stm32u5xx_hal_msp.pbi: \
-  C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\Core\Src\stm32u5xx_hal_msp.c \
-  C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\Core\Inc\main.h \
+C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\STM32U575_CDC_Standalone\BrowseInfo\STM32U5xx_HAL_Driver_18077472236357910042.dir\stm32u5xx_hal_adc.pbi: \
+  C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Drivers\STM32U5xx_HAL_Driver\Src\stm32u5xx_hal_adc.c \
   C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\..\..\..\..\..\Drivers\STM32U5xx_HAL_Driver\Inc\stm32u5xx_hal.h \
   C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\Core\Inc\stm32u5xx_hal_conf.h \
   C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\..\..\..\..\..\Drivers\STM32U5xx_HAL_Driver\Inc\stm32u5xx_hal_rcc.h \
@@ -53,30 +52,4 @@ C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\N
   C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\..\..\..\..\..\Drivers\STM32U5xx_HAL_Driver\Inc\stm32u5xx_hal_pcd.h \
   C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\..\..\..\..\..\Drivers\STM32U5xx_HAL_Driver\Inc\stm32u5xx_ll_usb.h \
   C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\..\..\..\..\..\Drivers\STM32U5xx_HAL_Driver\Inc\stm32u5xx_hal_pcd_ex.h \
-  C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\..\..\..\..\..\Drivers\STM32U5xx_HAL_Driver\Inc\stm32u5xx_hal_exti.h \
-  C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\..\..\..\..\..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h \
-  C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\..\..\..\..\..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h \
-  C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\..\..\..\..\..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_def.h \
-  C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\USB_Device\Target\usbd_conf.h \
-  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.2\arm\inc\c\stdio.h \
-  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.2\arm\inc\c\stdlib.h \
-  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.2\arm\inc\c\DLib_Product_stdlib.h \
-  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.2\arm\inc\c\string.h \
-  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.2\arm\inc\c\DLib_Product_string.h \
-  C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\..\..\..\..\..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_core.h \
-  C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\..\..\..\..\..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h \
-  C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\..\..\..\..\..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ctlreq.h \
-  C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\USB_Device\App\usbd_cdc_if.h \
-  C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\..\..\..\..\..\Drivers\STM32U5xx_HAL_Driver\Inc\stm32u5xx_ll_ucpd.h \
-  C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\..\..\..\..\..\Drivers\STM32U5xx_HAL_Driver\Inc\stm32u5xx_ll_bus.h \
-  C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\..\..\..\..\..\Drivers\STM32U5xx_HAL_Driver\Inc\stm32u5xx_ll_cortex.h \
-  C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\..\..\..\..\..\Drivers\STM32U5xx_HAL_Driver\Inc\stm32u5xx_ll_rcc.h \
-  C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\..\..\..\..\..\Drivers\STM32U5xx_HAL_Driver\Inc\stm32u5xx_ll_system.h \
-  C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\..\..\..\..\..\Drivers\STM32U5xx_HAL_Driver\Inc\stm32u5xx_ll_utils.h \
-  C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\..\..\..\..\..\Drivers\STM32U5xx_HAL_Driver\Inc\stm32u5xx_ll_pwr.h \
-  C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\..\..\..\..\..\Drivers\STM32U5xx_HAL_Driver\Inc\stm32u5xx_ll_gpio.h \
-  C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\..\..\..\..\..\Drivers\STM32U5xx_HAL_Driver\Inc\stm32u5xx_ll_dma.h \
-  C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\..\..\..\..\..\Drivers\STM32U5xx_HAL_Driver\Inc\stm32u5xx_ll_exti.h \
-  C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\..\..\..\..\..\Drivers\BSP\Seahorse_v1\seahorse.h \
-  C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\Core\Inc\seahorse_conf.h \
-  C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\..\..\..\..\..\Drivers\BSP\Seahorse_v1\seahorse_errno.h
+  C:\Users\Irdatlanka\Desktop\Irdatlanka-STM32U5_CoreMW_CDC_koncz_board\Projects\NUCLEO-U575ZI-Q\Applications\USB_Device\CDC_Standalone\EWARM\..\..\..\..\..\..\Drivers\STM32U5xx_HAL_Driver\Inc\stm32u5xx_hal_exti.h

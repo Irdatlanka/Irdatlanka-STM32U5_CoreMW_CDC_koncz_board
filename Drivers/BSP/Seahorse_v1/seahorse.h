@@ -299,6 +299,12 @@ int32_t BSP_LedTest(void);
 // HAL_StatusTypeDef MX_USART1_Init(UART_HandleTypeDef *huart, MX_UART_InitTypeDef *COM_Init);
 // #endif /* USE_BSP_COM_FEATURE */
 
+
+int32_t BSP_Init_ADC1(void);
+int32_t BSP_ADC1_Select_CH15(void);
+int32_t BSP_ADC1_Select_CH16(void);
+int32_t BSP_ADC1_Select_CH17(void);
+
 /**
   * @}
   */

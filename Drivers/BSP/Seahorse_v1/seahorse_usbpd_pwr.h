@@ -129,33 +129,33 @@ typedef void USBPD_PWR_VBUSDetectCallbackFunc(uint32_t PortNum,
 #define USBPD_PWR_INVALID_VALUE           0xFFFFFFFFU
 
 /* On STM32U5xx-Nucleo Kit (MB1549), following setup has been used :
-      VSENSE      => PC2 */
-#define VSENSE_GPIO_PORT                  GPIOC
-#define VSENSE_GPIO_PIN                   LL_GPIO_PIN_2
-#define VSENSE_GPIO_ENABLE_CLOCK()        LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_GPIOC);
+      VSENSE      => PC2 */ //koncz_change: ez PB0-on van nekünk
+#define VSENSE_GPIO_PORT                  GPIOB
+#define VSENSE_GPIO_PIN                   LL_GPIO_PIN_0
+//#define VSENSE_GPIO_ENABLE_CLOCK()        LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_GPIOB);
 
 
 /* PC2 is used as ADC1_IN3 input for ADC measurement of VBUS voltage :
    ADC1 Channel 3.
-*/
-#define VSENSE_ADC_INSTANCE               ADC1
-#define VSENSE_ADC_RANK                   ADC_REGULAR_RANK_1
-#define VSENSE_ADC_CHANNEL                ADC_CHANNEL_3
+*/        //koncz_change: ADC4_IN18, de ilyet nem játszunk
+// #define VSENSE_ADC_INSTANCE               ADC4
+// #define VSENSE_ADC_RANK                   ADC_REGULAR_RANK_1
+// #define VSENSE_ADC_CHANNEL                ADC_CHANNEL_18
 
-/* Enable ADC clock (core clock) */
-#define VSENSE_ADC_ENABLE_CLOCK()         LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_ADC1);
+/* Enable ADC clock (core clock) */ //koncz_change: ADC4
+//#define VSENSE_ADC_ENABLE_CLOCK()         LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_ADC4);
 
-/* Enable ADC clock (core clock) */
-#define VSENSE_ADC_DISABLE_CLOCK()        do {                                                        \
-                                               LL_AHB2_GRP1_ForceReset(LL_AHB2_GRP1_PERIPH_ADC1);     \
-                                               LL_AHB2_GRP1_ReleaseReset(LL_AHB2_GRP1_PERIPH_ADC1);   \
-                                               LL_AHB2_GRP1_DisableClock(LL_AHB2_GRP1_PERIPH_ADC1);   \
-                                             } while (0);
+/* Enable ADC clock (core clock) */  //koncz_change: ADC4
+// #define VSENSE_ADC_DISABLE_CLOCK()        do {                                                        \
+                                               // LL_AHB2_GRP1_ForceReset(LL_AHB2_GRP1_PERIPH_ADC4);     \
+                                               // LL_AHB2_GRP1_ReleaseReset(LL_AHB2_GRP1_PERIPH_ADC4);   \
+                                               // LL_AHB2_GRP1_DisableClock(LL_AHB2_GRP1_PERIPH_ADC4);   \
+                                             // } while (0);
 
-/* Clock enabling for TCPP01 DB signal : PB5 */
-#define GPIO_TCPP01_DB_PORT               GPIOB
-#define GPIO_TCPP01_DB_PIN                LL_GPIO_PIN_5
-#define GPIO_TCPP01_DB_CLK_ENABLE()       LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_GPIOB);
+/* Clock enabling for TCPP01 DB signal : PB5 */ //koncz_change: PC5-ön van a Dead Battery
+#define GPIO_TCPP01_DB_PORT               GPIOC
+#define GPIO_TCPP01_DB_PIN                GPIO_PIN_5
+//#define GPIO_TCPP01_DB_CLK_ENABLE()       LL_AHB2_GRP1_EnableClock(LL_AHB2_GRP1_PERIPH_GPIOC);
 
 /**
   * @}
