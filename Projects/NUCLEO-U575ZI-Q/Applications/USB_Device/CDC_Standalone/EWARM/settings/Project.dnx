@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <settings>
     <StLinkDriver>
+        <stlinkserialNo>002900154D46501120373033</stlinkserialNo>
+        <stlinkfoundProbes />
         <LeaveTargetRunning>_ 0</LeaveTargetRunning>
         <CStepIntDis>_ 0</CStepIntDis>
         <stlinkResetStyle>0</stlinkResetStyle>
         <stlinkResetStrategy>2</stlinkResetStrategy>
-        <stlinkserialNo>002900154D46501120373033</stlinkserialNo>
-        <stlinkfoundProbes />
     </StLinkDriver>
     <PlDriver>
-        <MemConfigValue>C:\Program Files\IAR Systems\Embedded Workbench 9.2\arm\config\debugger\ST\STM32U585RI.ddf</MemConfigValue>
         <FirstRun>0</FirstRun>
+        <MemConfigValue>C:\Program Files\IAR Systems\Embedded Workbench 9.2\arm\config\debugger\ST\STM32U585RI.ddf</MemConfigValue>
     </PlDriver>
     <DebugChecksum>
         <Checksum>1304427581</Checksum>
@@ -60,8 +60,8 @@
         <ITMlogFile>$PROJ_DIR$\ITM.log</ITMlogFile>
     </SWOTraceHWSettings>
     <ArmDriver>
-        <EnableCache>0</EnableCache>
         <EnforceMemoryConfiguration>1</EnforceMemoryConfiguration>
+        <EnableCache>0</EnableCache>
     </ArmDriver>
     <TerminalIO>
         <InputSource>1</InputSource>
@@ -117,19 +117,6 @@
         <ShowTimeSum>1</ShowTimeSum>
         <SumSortOrder>0</SumSortOrder>
     </EventLog>
-    <DisassembleMode>
-        <mode>0</mode>
-    </DisassembleMode>
-    <Breakpoints2>
-        <Bp0>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\USB_Device\App\usbd_cdc_if.c}.319.3" 0 0 1 "" 0 "" 0</Bp0>
-        <Bp1>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Core\Src\main.c}.40.1" 0 0 1 "" 0 "" 0</Bp1>
-        <Bp2>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\Core\Src\main.c}.152.18" 0 0 1 "" 0 "" 0</Bp2>
-        <Count>3</Count>
-    </Breakpoints2>
-    <Aliases>
-        <Count>0</Count>
-        <SuppressDialog>0</SuppressDialog>
-    </Aliases>
     <DriverProfiling>
         <Enabled>0</Enabled>
         <Mode>3</Mode>
@@ -141,4 +128,16 @@
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
     </TermIOLog>
+    <DisassembleMode>
+        <mode>0</mode>
+    </DisassembleMode>
+    <Breakpoints2>
+        <Bp0>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\USB_Device\App\usbd_cdc_if.c}.319.3" 0 0 1 "" 0 "" 0</Bp0>
+        <Bp1>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Core\Src\main.c}.40.1" 0 0 1 "" 0 "" 0</Bp1>
+        <Count>2</Count>
+    </Breakpoints2>
+    <Aliases>
+        <Count>0</Count>
+        <SuppressDialog>0</SuppressDialog>
+    </Aliases>
 </settings>
