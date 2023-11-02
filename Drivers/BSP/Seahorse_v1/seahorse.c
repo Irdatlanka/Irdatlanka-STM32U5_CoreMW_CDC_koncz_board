@@ -22,6 +22,9 @@
 #include "seahorse.h"
 #include "main.h"
 
+#define BSP_ADC1_RESOLUTION 4096 // 1 << 12
+#define BSP_VREF 3300
+#define BSP_VBUS_DIVIDER 0.3125f //10/(10+22)
 
 ADC_HandleTypeDef hadc1;
 
@@ -298,3 +301,21 @@ int32_t BSP_ADC1_Select_CH17(void)
 		return ret;
 }
 
+/**
+  * @brief  Measure VBUS voltage.
+  * @retval VBUS voltage in mV
+  */
+int32_t BSP_MeasureVBUS(void)
+{
+  uint32_t adc_raw;
+  BSP_ADC1_Select_CH15();
+  HAL_ADC_Start(&hadc1);
+  HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
+  adc_raw = HAL_ADC_GetValue(&hadc1);
+  HAL_ADC_Stop(&hadc1);
+  
+  float adc_vlt = ((float)adc_raw / (float)BSP_ADC1_RESOLUTION) * (float)BSP_VREF;
+  float vbus =  (adc_vlt / (float)BSP_VBUS_DIVIDER) ; 
+  int32_t vbus_s = (int32_t) vbus;
+  return vbus_s;
+}

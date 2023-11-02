@@ -74,7 +74,7 @@ static void MX_USART1_UART_Init(void);
 int main(void)
 {
   uint32_t adc_raw[3];
-  
+  int32_t vbus;
   /* MCU Configuration--------------------------------------------------------*/
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
@@ -149,7 +149,9 @@ int main(void)
 		HAL_ADC_Stop(&hadc1);
 
 	  //printf("ADC raw: %d %d %d\r\n\r\n", (int)adc_raw[0], (int)adc_raw[1], (int)adc_raw[2]);
+          vbus = BSP_MeasureVBUS();
 	  HAL_Delay(100);
+          
     
     
     

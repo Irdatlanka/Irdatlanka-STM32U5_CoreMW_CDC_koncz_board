@@ -115,7 +115,7 @@ int32_t BSP_Init_ADC1(void);
 int32_t BSP_ADC1_Select_CH15(void);
 int32_t BSP_ADC1_Select_CH16(void);
 int32_t BSP_ADC1_Select_CH17(void);
-
+int32_t BSP_MeasureVBUS(void);
 
 #ifdef __cplusplus
 }
