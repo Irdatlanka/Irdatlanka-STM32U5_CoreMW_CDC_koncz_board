@@ -20,7 +20,6 @@
   *
   ******************************************************************************
   */
-#if 0
 
 /* Includes ------------------------------------------------------------------*/
 #include "seahorse_usbpd_pwr.h"
@@ -30,9 +29,9 @@
 
 //koncz_change:
 #include "stm32u5xx_hal.h"
-
+#include "seahorse.h"
 //extern ADC_HandleTypeDef hadc1;
-extern ADC_HandleTypeDef hadc4; //for USB VBUS
+//extern ADC_HandleTypeDef hadc4; //for USB VBUS
 
 /** @addtogroup BSP
   * @{
@@ -165,9 +164,9 @@ int32_t BSP_USBPD_PWR_VBUSInit(uint32_t PortNum)
   else
   {
     /* Initialize VBUS sensing ADC */
-    //MX_ADC1_Init(); //koncz_change: main-ben inicializált ADC-t használunk
+    //MX_ADC1_Init(); //koncz_change: ez itt csak elkezdi a konverziót 
 
-    LL_ADC_REG_StartConversion(VSENSE_ADC_INSTANCE); // TODO: ez kell??
+    //LL_ADC_REG_StartConversion(VSENSE_ADC_INSTANCE); 
   }
   return ret;
 }
@@ -191,11 +190,12 @@ int32_t BSP_USBPD_PWR_VBUSDeInit(uint32_t PortNum)
   }
   else
   {
-    if (LL_ADC_REG_IsConversionOngoing(VSENSE_ADC_INSTANCE) != 0UL)
-    {
-      LL_ADC_REG_StopConversion(VSENSE_ADC_INSTANCE);
-    }
-	//koncz_change:
+	 	//koncz_change: 
+    // if (LL_ADC_REG_IsConversionOngoing(VSENSE_ADC_INSTANCE) != 0UL)
+    // {
+      // LL_ADC_REG_StopConversion(VSENSE_ADC_INSTANCE);
+    // }
+
     // /* Disable ADC */
     // if (LL_ADC_IsEnabled(VSENSE_ADC_INSTANCE) == 1UL)
     // {
@@ -215,22 +215,22 @@ int32_t BSP_USBPD_PWR_VBUSDeInit(uint32_t PortNum)
   *         @arg @ref USBPD_PWR_TYPE_C_PORT_1
   * @retval BSP status
   */
-  //koncz_change: not supported, ki is hagyom
-// int32_t BSP_USBPD_PWR_VBUSOn(uint32_t PortNum)
-// {
-  // int32_t ret;
+  //koncz_change: not supported, de van hívva
+int32_t BSP_USBPD_PWR_VBUSOn(uint32_t PortNum)
+{
+  int32_t ret;
 
-  // /* Check if instance is valid */
-  // if (PortNum >= USBPD_PWR_INSTANCES_NBR)
-  // {
-    // ret = BSP_ERROR_WRONG_PARAM;
-  // }
-  // else
-  // {
-    // ret = BSP_ERROR_FEATURE_NOT_SUPPORTED;
-  // }
-  // return ret;
-// }
+  /* Check if instance is valid */
+  if (PortNum >= USBPD_PWR_INSTANCES_NBR)
+  {
+    ret = BSP_ERROR_WRONG_PARAM;
+  }
+  else
+  {
+    ret = BSP_ERROR_FEATURE_NOT_SUPPORTED;
+  }
+  return ret;
+}
 
 /**
   * @brief  Disable power supply over VBUS.
@@ -239,22 +239,22 @@ int32_t BSP_USBPD_PWR_VBUSDeInit(uint32_t PortNum)
   *         @arg @ref USBPD_PWR_TYPE_C_PORT_1
   * @retval BSP status
   */
-  //koncz_change: not supported, ki is hagyom
-// int32_t BSP_USBPD_PWR_VBUSOff(uint32_t PortNum)
-// {
-  // int32_t ret;
+  //koncz_change: not supported, de van hívva
+int32_t BSP_USBPD_PWR_VBUSOff(uint32_t PortNum)
+{
+  int32_t ret;
 
-  // /* Check if instance is valid */
-  // if (PortNum >= USBPD_PWR_INSTANCES_NBR)
-  // {
-    // ret = BSP_ERROR_WRONG_PARAM;
-  // }
-  // else
-  // {
-    // ret = BSP_ERROR_FEATURE_NOT_SUPPORTED;
-  // }
-  // return ret;
-// }
+  /* Check if instance is valid */
+  if (PortNum >= USBPD_PWR_INSTANCES_NBR)
+  {
+    ret = BSP_ERROR_WRONG_PARAM;
+  }
+  else
+  {
+    ret = BSP_ERROR_FEATURE_NOT_SUPPORTED;
+  }
+  return ret;
+}
 
 /**
   * @brief  Get actual VBUS status.
@@ -264,23 +264,23 @@ int32_t BSP_USBPD_PWR_VBUSDeInit(uint32_t PortNum)
   * @param  pState VBUS status (1: On, 0: Off)
   * @retval BSP status
   */
-  //koncz_change: not supported, ki is hagyom
-// int32_t BSP_USBPD_PWR_VBUSIsOn(uint32_t PortNum, uint8_t *pState)
-// {
-  // int32_t ret;
+  //koncz_change: not supported, de van hívva
+int32_t BSP_USBPD_PWR_VBUSIsOn(uint32_t PortNum, uint8_t *pState)
+{
+  int32_t ret;
 
-  // /* Check if instance is valid */
-  // if (PortNum >= USBPD_PWR_INSTANCES_NBR)
-  // {
-    // ret = BSP_ERROR_WRONG_PARAM;
-  // }
-  // else
-  // {
-    // *pState = 0u;
-    // ret = BSP_ERROR_FEATURE_NOT_SUPPORTED;
-  // }
-  // return ret;
-// }
+  /* Check if instance is valid */
+  if (PortNum >= USBPD_PWR_INSTANCES_NBR)
+  {
+    ret = BSP_ERROR_WRONG_PARAM;
+  }
+  else
+  {
+    *pState = 0u;
+    ret = BSP_ERROR_FEATURE_NOT_SUPPORTED;
+  }
+  return ret;
+}
 
 /**
   * @brief  Set a fixed/variable PDO and manage the power control.
@@ -504,19 +504,17 @@ int32_t BSP_USBPD_PWR_VBUSGetVoltage(uint32_t PortNum, uint32_t *pVoltage)
     // val = __LL_ADC_CALC_DATA_TO_VOLTAGE(VSENSE_ADC_INSTANCE, VDDA_APPLI,
                                         // (uint32_t) LL_ADC_REG_ReadConversionData12(VSENSE_ADC_INSTANCE),
                                         // LL_ADC_RESOLUTION_12B);
+	/* NUCLEO144_Q (MB1549) board is used */
+    /* Value is multiplied by 7.61 (Divider R35+R34/R34 (379.9K/49.9K) for VSENSE) */
+    // val *= 761UL;
+    // val /= 100UL;
+    // *pVoltage = val;
 	//koncz_change:
 	// -----------------------------------------------ITT--------------------------------------------
 	//----------------------------------------------------------------------------------------------------
-	uint16_t raw;
-	HAL_ADC_Start(&hadc4);
-	HAL_ADC_PollForConversion(&hadc4, HAL_MAX_DELAY);
-	raw = HAL_ADC_GetValue(&hadc4);
-	HAL_ADC_Stop(&hadc4);
-    /* NUCLEO144_Q (MB1549) board is used */
-    /* Value is multiplied by 7.61 (Divider R35+R34/R34 (379.9K/49.9K) for VSENSE) */
-    val *= 761UL;
-    val /= 100UL;
-    *pVoltage = val;
+	int32_t vbus = BSP_MeasureVBUS();
+	*pVoltage = (uint32_t) vbus;
+
   }
   return ret;
 }
@@ -881,5 +879,3 @@ int32_t BSP_USBPD_PWR_VCONNDischargeOff(uint32_t PortNum)
 
 
 
-
-#endif

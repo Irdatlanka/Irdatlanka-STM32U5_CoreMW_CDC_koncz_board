@@ -77,7 +77,10 @@ typedef enum
 #define LED5_PIN                                GPIO_PIN_3
 #define LED5_GPIO_PORT                          GPIOA
 
-
+//ADC and measurement related stuff:
+#define BSP_ADC1_RESOLUTION 4096 // 1 << 12
+#define BSP_VREF 3300
+#define BSP_VBUS_DIVIDER 0.3125f //10/(10+22)
 
 
 //int32_t  BSP_GetVersion(void);

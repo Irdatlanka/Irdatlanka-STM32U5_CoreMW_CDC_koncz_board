@@ -22,9 +22,6 @@
 #include "seahorse.h"
 #include "main.h"
 
-#define BSP_ADC1_RESOLUTION 4096 // 1 << 12
-#define BSP_VREF 3300
-#define BSP_VBUS_DIVIDER 0.3125f //10/(10+22)
 
 ADC_HandleTypeDef hadc1;
 

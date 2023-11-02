@@ -214,7 +214,7 @@ int32_t BSP_USBPD_PWR_SetVBUSDisconnectionThreshold(uint32_t PortNum,
 int32_t BSP_USBPD_PWR_RegisterVBUSDetectCallback(uint32_t PortNum,//<-------------------------------------------------------------------------
                                                  USBPD_PWR_VBUSDetectCallbackFunc *pfnVBUSDetectCallback);
 
-int32_t BSP_USBPD_PWR_VBUSGetVoltage(uint32_t PortNum, uint32_t *pVoltage); //<-------------------------------------------------------------------------
+int32_t BSP_USBPD_PWR_VBUSGetVoltage(uint32_t PortNum, uint32_t *pVoltage); //<--------------!!!!!!!-----------------------------------------------------------
 
 int32_t BSP_USBPD_PWR_VBUSGetCurrent(uint32_t PortNum, int32_t *pCurrent);//<-------------------------------------------------------------------------
 

@@ -95,7 +95,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   //koncz_note: disable dead battery on TCPP01:
-  HAL_GPIO_WritePin(usbdb__GPIO_Port, usbdb__Pin, GPIO_PIN_SET);
+  //HAL_GPIO_WritePin(usbdb__GPIO_Port, usbdb__Pin, GPIO_PIN_SET); //erre már nincs szükség, BSP
   
   //koncz_note: BSP-s ADC1 init
   if (BSP_Init_ADC1() != BSP_ERROR_NONE)
@@ -113,50 +113,49 @@ int main(void)
   
   /* Initialize all configured peripherals */
     /* Global Init of USBPD HW */
- // USBPD_HW_IF_GlobalHwInit();
+  USBPD_HW_IF_GlobalHwInit();
 
- // MX_USB_Device_Init();
+  MX_USB_Device_Init();
 
- // MX_USBPD_Init();
+  MX_USBPD_Init();
   /* Configure the application hardware resources */
 
   /* Infinite loop */
   while (1)
   {
 
-    if (BSP_LedTest() != BSP_ERROR_NONE)
-    {
-      Error_Handler();
-    }
+//    if (BSP_LedTest() != BSP_ERROR_NONE)
+//    {
+//      Error_Handler();
+//    }
     
-    
-    	  BSP_ADC1_Select_CH15();
-	  	HAL_ADC_Start(&hadc1);
-		HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
-		adc_raw[0] = HAL_ADC_GetValue(&hadc1);
-		HAL_ADC_Stop(&hadc1);
-	  HAL_Delay(1);
-	  BSP_ADC1_Select_CH16();
-	  	HAL_ADC_Start(&hadc1);
-		HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
-		adc_raw[1] = HAL_ADC_GetValue(&hadc1);
-		HAL_ADC_Stop(&hadc1);
-	  HAL_Delay(1);
-	  BSP_ADC1_Select_CH17();
-	  	HAL_ADC_Start(&hadc1);
-		HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
-		adc_raw[2] = HAL_ADC_GetValue(&hadc1);
-		HAL_ADC_Stop(&hadc1);
+//    	  BSP_ADC1_Select_CH15();
+//	  	HAL_ADC_Start(&hadc1);
+//		HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
+//		adc_raw[0] = HAL_ADC_GetValue(&hadc1);
+//		HAL_ADC_Stop(&hadc1);
+//	  HAL_Delay(1);
+//	  BSP_ADC1_Select_CH16();
+//	  	HAL_ADC_Start(&hadc1);
+//		HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
+//		adc_raw[1] = HAL_ADC_GetValue(&hadc1);
+//		HAL_ADC_Stop(&hadc1);
+//	  HAL_Delay(1);
+//	  BSP_ADC1_Select_CH17();
+//	  	HAL_ADC_Start(&hadc1);
+//		HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
+//		adc_raw[2] = HAL_ADC_GetValue(&hadc1);
+//		HAL_ADC_Stop(&hadc1);
 
-	  //printf("ADC raw: %d %d %d\r\n\r\n", (int)adc_raw[0], (int)adc_raw[1], (int)adc_raw[2]);
-          vbus = BSP_MeasureVBUS();
-	  HAL_Delay(100);
+//	  //printf("ADC raw: %d %d %d\r\n\r\n", (int)adc_raw[0], (int)adc_raw[1], (int)adc_raw[2]);
+//          vbus = BSP_MeasureVBUS();
+//	  HAL_Delay(100);
           
     
     
     
 /* Run the detection state machine */
-    //USBPD_DPM_Run();
+    USBPD_DPM_Run();
   }
 }
 
